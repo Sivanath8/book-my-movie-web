@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Movies Details</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<link rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous">
+   		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+   		<style type="text/css">
+/* Header portion Start */
+#container1 {
+	width: 100%;
+	height: 1080px;
+}
+
+.header1 {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100px;
+	background: #0F1924 0% 0% no-repeat padding-box;
+	opacity: 1;
+	z-index: 30;
+}
+
+.header1 .logo {
+	position: absolute;
+	top: 24px;
+	left: 150px;
+	width: 134px;
+	height: 53px;
+	border: 3px solid #FFFFFF;
+	opacity: 1;
+}
+
+.logo h4 {
+	color: #FAFAFA;
+	top: 9px;
+	position: relative;
+	text-align: center;
+}
+.logo i
+			{
+			    font-size: 50px;
+			    color: white;
+			    top: -15px;
+			    left: 119px;
+			    position: absolute;
+			}
+
+.content_icon1 {
+	position: absolute;
+	top: 34px;
+	left: 1537px;
+	width: 72px;
+	height: 33px;
+	text-align: left;
+	letter-spacing: 0px;
+	opacity: 1;
+}
+
+.content_icon1 #first_button {
+	font-family: arial;
+	font-size: 25px;
+	background-color: #0F1924;
+	color: #FFFFFF;
+	cursor: pointer;
+	border: none;
+}
+
+.content_icon2 i {
+	position: absolute;
+	top: 13px;
+	left: 1663px;
+	width: 53px;
+	height: 53px;
+	font-size: 50px;
+	color: white;
+}
+
+.p-name {
+	position: absolute;
+	top: 30px;
+	left: 1734px;
+	width: 140px;
+	height: 33px;
+	text-align: left;
+	font-size: 25px;
+	letter-spacing: 0px;
+	color: #FFFFFF;
+	opacity: 1;
+}
+/* Header Portion Was Completed */
+/*Search Portion Will Start*/
+.container_search {
+	position: absolute;
+	top: 130px;
+	left: 456px;
+	width: 1008px;
+	height: 50px;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	box-shadow: 0px 0px 3px #053B76AD;
+	opacity: 1;
+}
+
+.container_search i {
+	position: absolute;
+	top: 0px;
+	font-size: 30px;
+	bottom: 10px;
+	right: 21px;
+	left: 950px;
+	cursor: pointer;
+}
+
+.container_search input {
+	position: absolute;
+	border: none;
+	width: 1008px;
+	height: 50px;
+	padding-left: 48px;
+	font-family: Arial;
+	font-size: 16px;
+}
+/*Search Portion Will End*/
+/* Backgroung Portion Will Start */
+.back-img {
+	position: absolute;
+	top: 214px;
+	left: 150px;
+	width: 1661px;
+	height: 519px;
+	background: transparent
+		linear-gradient(270deg, #FEB762 0%, #000000 100%) padding-box;
+	border: 1px solid #707070;
+	opacity: 0.67;
+}
+
+.front-image {
+	position: absolute;
+	top: 234px;
+	left: 268px;
+	width: 356px;
+	height: 478px;
+	border: 5px solid #D6346C;
+	opacity: 1;
+}
+
+.movie-name {
+	position: absolute;
+	top: 250px;
+	left: 676px;
+	width: 224px;
+	height: 59px;
+	color: #ffffff;
+	font-size: 45px;
+}
+
+.movie_content1 {
+	position: absolute;
+	display: flex;
+	top: 339px;
+	left: 676px;
+	width: 221px;
+	height: 40px;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	border-radius: 3px;
+	opacity: 1;
+	z-index: 1;
+}
+
+.movie_content1 #para1 {
+	position: absolute;
+	color: #0F1924;
+	font-size: 20px;
+	left: 19px;
+	top: 5px;
+	font-weight: bold;
+	border-right: 1px solid;
+	border-color: #D6346C;
+	padding-right: 17px;
+	z-index: 1;
+}
+
+.movie_content1 #para2 {
+	position: absolute;
+	color: #0F1924;
+	font-size: 20px;
+	left: 82px;
+	top: 5px;
+	font-weight: bold;
+}
+
+span {
+	position: absolute;
+	top: 407px;
+	left: 676px;
+	width: 30px;
+	height: 29px;
+	color: #FFFFFF;
+	font-size: 25px;
+	z-index:1;
+}
+
+pre {
+	position: absolute;
+	top: 405px;
+	left: 726px;
+	font-family: arial;
+	font-size: 28px;
+	font-weight: bold;
+	letter-spacing: 0px;
+	color: #FFFFFF;
+	z-index:1;
+}
+
+.movie-about {
+	position: absolute;
+	top: 464px;
+	left: 676px;
+	width: 225px;
+	height: 26px;
+	color: #FFFFFF;
+	font-size: 20px;
+}
+
+.movie-date{
+	position: absolute;
+	top: 464px;
+	left: 903px;
+	width: 114px;
+	height: 26px;
+	color: #FFFFFF;
+	font-size: 20px;
+}
+
+.movie-cat {
+	position: absolute;
+	top: 518px;
+	left: 676px;
+	width: 156px;
+	height: 26px;
+	color: #FFFFFF;
+	font-size: 19px;
+}
+
+#para6 {
+	position: absolute;
+	top: 574px;
+	left: 676px;
+	height: 26px;
+	color: #FFFFFF;
+	font-size: 20px;
+	z-index:1;
+}
+.movie-cast
+{
+   position: absolute;
+	top: 574px;
+	left: 780px;
+	height: 26px;
+	color: #FFFFFF;
+	font-size: 20px;
+}
+
+div .button {
+	position: absolute;
+	top: 647px;
+	left: 676px;
+	width: 221px;
+	height: 50px;
+	background-color: #D6346C;
+	border-radius: 3px;
+	cursor:pointer;
+}
+
+.button-btn {
+	border: none;
+	position: absolute;
+	top: 647px;
+	left: 676px;
+	width: 221px;
+	height: 50px;
+	background-color: #D6346C;
+	cursor: pointer;
+	font-size: 20px;
+	color: #FFFFFF;
+	font-weight: bold;
+	z-index: 1;
+}
+
+.about-movie1 {
+	position: absolute;
+	top: 764px;
+	left: 150px;
+	width: 215px;
+	height: 46px;
+	text-align: left;
+	font-weight: bold;
+	font-size: 35px;
+	letter-spacing: 0px;
+	color: #0F1924;
+	opacity: 1;
+}
+
+.about-movie {
+	position: absolute;
+	top: 825px;
+	left: 150px;
+	width: 1661px;
+	height: 119px;
+	text-align: left;
+	font-weight: normal;
+	font-size: 16px;
+	font-family: arial;
+	letter-spacing: 0px;
+	color: #000000;
+	opacity: 1;
+}
+.logo a
+{
+text-decoration:none;
+}
+</style>
+<script type="text/javascript">
+function open(){
+	const UrlParam = new URLSearchParams(window.location.search);
+	var movieid = UrlParam.get('sendName');
+	console.log(movieid);
+	var data ={
+			"movie_id":movieid
+	}
+		 debugger;
+			$.ajax({
+				type : "POST",
+				headers : {
+					'Content-Type' : 'application/json'
+				},
+				crossDomain : true,
+				url : "/movie/MovieDetails", //this is my servlet
+				data : JSON.stringify(data),
+				dataType:'json',
+				success : function(response)
+				{
+					var movie=response;
+					console.log(movie);
+					
+					var bodyDiv=document.createElement("div");
+					bodyDiv.className="body-div";
+					
+					var backImage=document.createElement('img');
+					backImage.src=movie["allMovie"][0].movie_background;
+					backImage.className='back-img';
+					bodyDiv.appendChild(backImage);
+					
+					
+					 var image=document.createElement('img');
+					image.src=movie["allMovie"][0].front_image;
+					 image.className='front-image';
+					console.log(movie["allMovie"][0].front_image);
+					
+					
+					
+					 var name=document.createElement('p');
+					name.className='movie-name';
+					name.innerText=movie["allMovie"][0].movie_names;
+					
+					var movieAbout=document.createElement('p');
+					movieAbout.className='movie-about';
+					movieAbout.innerText=movie["allMovie"][0].movie_about;
+					
+					var movieDate=document.createElement('p');
+					movieDate.className='movie-date';
+					movieDate.innerText=movie["allMovie"][0].movie_date;
+					
+					var movieCategory=document.createElement('p')
+					movieCategory.className='movie-cat';
+					movieCategory.innerText=movie["allMovie"][0].movie_category;
+					
+					var movieCast=document.createElement('p');
+					movieCast.className='movie-cast';
+					movieCast.innerText=movie["allMovie"][0].cast;
+					
+					var aboutMovie=document.createElement('P');
+					aboutMovie.className='about-movie';
+					aboutMovie.innerText=movie["allMovie"][0].about_movie;
+					
+					var sendId=movie["allMovie"][0].movie_id;
+					console.log(sendId);
+					
+					const storedUserName = sessionStorage.getItem('username');
+					var bookLink=document.createElement('a');
+					bookLink.href="http://localhost:8080/movie/theaters?movieId="+sendId +"&name="+storedUserName;
+					
+					var button=document.createElement('button');
+					button.className='button-btn';
+					button.innerText="Book Tickets";
+					bookLink.appendChild(button);
+					
+					bodyDiv.appendChild(name);
+					bodyDiv.appendChild(bookLink);
+					bodyDiv.appendChild(image);
+					bodyDiv.appendChild(movieAbout);
+					bodyDiv.appendChild(movieDate);
+					bodyDiv.appendChild(movieCategory);
+					bodyDiv.appendChild(movieCast);
+					bodyDiv.appendChild(aboutMovie);
+					document.getElementById("container1").appendChild(bodyDiv);
+				},     
+   				error : function(jqXHR, exception) {
+   					// Our error logic here
+   				var msg = '';
+   					if (jqXHR.status === 0) {
+   						msg = 'Not connect.\n Verify Network.';
+   					} else if (jqXHR.status == 404) {
+   						msg = 'Requested page not found. [404]';
+   					} else if (jqXHR.status == 500) {
+   						msg = 'Internal Server Error [500].';
+   					} else if (exception === 'parsererror') {
+   						msg = 'Requested JSON parse failed.';
+   					} else if (exception === 'timeout') {
+   						msg = 'Time out error.';
+   					} else if (exception === 'abort') {
+   						msg = 'Ajax request aborted.';
+   					} else if (jqXHR.status === 401) {
+   						window.location.href = "/smco/SessionFailed.jsp"
+   					} else {
+   						msg = 'Uncaught Error.\n' + jqXHR.responseText;
+   					} 
+   				}
+   				
+   			});
+   		}
+
+
+</script>
+</head>
+<body onload="open();userName();">
+   <div id="container1">
+		<div class="row">
+			<!-- header Started in the below -->
+			<div class="header1">
+				 <div class="logo">
+				    <a href="http://localhost:8080/movie/Customers">
+				 	<h4>
+				 	SD Movie
+				 	</h4>
+				 	</a>
+				 	<i class="bi bi-caret-left"></i>
+				 </div>
+					<div class="content_icon1">
+							<button id="first_button">Admin</button>
+					</div>
+					<div class="content_icon2">
+						<i class="bi bi-person-circle"></i>
+						<script type="text/javascript">
+						function userName(){
+							const UrlParam = new URLSearchParams(window.location.search);
+							var userName = UrlParam.get('name');
+							var pName = document.getElementsByClassName('p-name')[0];
+							pName.textContent = 'Hi ' + userName;
+							sessionStorage.setItem('username', userName);
+							}
+						</script>
+						<p class="p-name"></p>
+					</div>
+				</div>
+			</div>
+			<!-- header will be end in above -->
+			<!-- Container Search Box Started  -->
+		<div class="row1">
+				<div class="container_search">
+					<input type="text" placeholder="Search Movies, Theaters"> 
+					<i class="bi bi-search"></i>
+				</div>
+		</div>
+		    <!-- Container Search Box Will be End -->
+		    <!-- About the Movie Will Show -->
+		   
+		            <div class="movie_content1">
+			           <p id="para1" > 2D </p> 
+			           <p id="para2"> Tamil,English</p>
+		            </div>
+		            <div>
+		             <span id="1" class="bi bi-star"></span>
+		             <pre>9/10</pre>
+		             <p id="para6">Major Cast:</p>
+		             <p class="about-movie1"> About Movie</p>
+		          </div>	    
+	</div>		    
+</body>
+</html>

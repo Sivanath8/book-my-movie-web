@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="ISO-8859-1">
+<title>Book My Movie</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+		integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+		crossorigin="anonymous">
+          </script>
+<style type="text/css">
+				/*------------------ HEADER POSTION WILL START--------------- */
+				.container1 {
+					width: 100%;
+					height: 1750px;
+				}
+				
+				.header1 {
+					position: fixed;
+					top: 0px;
+					left: 0px;
+					width: 1920px;
+					height: 100px;
+					background: #0F1924 0% 0% no-repeat padding-box;
+					opacity: 1;
+					z-index: 30;
+				}
+				
+				.header1 .logo {
+					position: absolute;
+					top: 24px;
+					left: 150px;
+					width: 134px;
+					height: 53px;
+					border: 3px solid #FFFFFF;
+					opacity: 1;
+				}
+				
+				.logo h4 {
+					color: #FAFAFA;
+					top: 9px;
+					position: relative;
+					text-align: center;
+				}
+				
+				.logo i {
+					font-size: 50px;
+					color: white;
+					top: -15px;
+					left: 119px;
+					position: absolute;
+				}
+				
+				#numberError {
+					color: red;
+					display: block;
+					position: absolute;
+					top: 45px;
+					left: 150px;
+					width: 260px;
+				}
+				
+				.content_right {
+					position: relative;
+					top: 24px;
+					left: 150px;
+					width: 134px;
+					height: 53px;
+					border: 3px solid #FFFFFF;
+					opacity: 1;
+				}
+				
+				h4 {
+					color: #FAFAFA;
+					top: 9px;
+					position: relative;
+					text-align: center;
+				}
+				
+				.content_icon1 {
+					position: absolute;
+					top: 33px;
+					left: 1347px;
+					width: 72px;
+					height: 33px;
+					text-align: left;
+					font: normal normal normal 25px/33px arial;
+					
+					opacity: 1;
+				}
+				
+				.content_icon1 #first_button {
+					font-family: arial;
+					background-color: #0F1924;
+					color: #FFFFFF;
+					cursor: pointer;
+					border: none;
+				}
+				
+				.content_icon2 {
+					position: absolute;
+					top: 25px;
+					left: 1468px;
+					width: 147px;
+					height: 50px;
+					background: #FFFFFF 0% 0% no-repeat padding-box;
+					border: 1px solid #707070;
+					border-radius: 3px;
+					opacity: 1;
+				}
+				
+				.content_icon2 #second_button {
+					font-family: arial;
+					background-color: #FFFFFF;
+					width: 147px;
+					height: 50px;
+					border: 1px solid #707070;
+					font-size: 25px;
+					cursor: pointer;
+					border-radius: 3px;
+				}
+				
+				.content_icon3 {
+					position: absolute;
+					top: 26px;
+					left: 1664px;
+					width: 147px;
+					height: 50px;
+					text-align: left;
+				}
+				
+				.content_icon3 #third_button {
+					color: #F8FCFF;
+					width: 147px;
+					height: 50px;
+					font: normal normal normal 25px/33px arial;
+					opacity: 1;
+					cursor: pointer;
+					background-color: #0F1924;
+					border: 1px solid #FFFFFF;
+					border-radius: 3px;
+					opacity: 1;
+				}
+				
+				.container_search {
+					position: absolute;
+					top: 130px;
+					left: 456px;
+					width: 1008px;
+					height: 50px;
+					background: #FFFFFF 0% 0% no-repeat padding-box;
+					box-shadow: 0px 0px 3px #053B76AD;
+					opacity: 1;
+				}			
+				.container_search i {
+					position: absolute;
+					top: 10px;
+					bottom: 10px;
+					right: 21px;
+					left: 957px;
+					cursor: pointer;
+				}			
+				.container_search input {
+					position: absolute;
+					border: none;
+					width: 1008px;
+					height: 50px;
+					padding-left: 48px;
+					font-family: Arial;
+					font-size: 16px;
+				}
+				
+			/*Movie Image Portion Starts*/
+
+			.row2
+			{
+				position: absolute;
+				top: 207px;
+				left: 140px;
+				width: 102px;
+				height: 33px;
+				text-align: left;
+				font-weight:bold;
+				letter-spacing: 0px;
+				color: #0F1924;
+				opacity: 1;
+			}
+			.row3
+			{
+				position: absolute;
+				top: 703px;
+				left: 140px;
+				width: 225px;
+				height: 33px;
+				text-align: left;
+				font-weight:bold;
+				letter-spacing: 0px;
+				color: #0F1924;
+				opacity: 1;
+			}
+
+			
+			/* All Movies Details Start */
+			.movies0
+			{
+			position:absolute;
+			top: 256px;
+			left: 140px;
+			width: 299px;
+			height: 398px;
+			}
+			.movies0 img
+			{
+			position:absolute;
+			display:block;
+			width: 299px;
+			height: 345px;
+			border-radius:10px;
+			cursor:pointer;
+			}
+			.movies0 .movie-count0
+			{
+			   position: absolute;
+			    background-color: white;
+			    font-weight: normal;
+			    font-family: arial;
+			    left: 9px;
+			    top: 7px;
+			    width: 33px;
+			    height: 33px;
+			    border-radius: 16px;
+			    text-align: center;
+			    padding-top: 6px;
+			    padding-right: 1px;
+			    color:#0F1924;
+			}
+			
+			.movie-type0
+			{
+			   position:absolute;
+			   top: 366px;
+				left: 231px;
+				width: 68px;
+				height: 21px;
+				text-align: left;
+				font-size:16px;
+				font-weight:normal;
+				
+				color: #6B7E93;
+				opacity: 1;
+			}
+		
+				.Star-icon0 i
+				{
+				position:absolute;
+				color:#0F1924;
+				left: 414px;
+			    top: 653px;
+			    font-size: 20px;
+				}
+			
+			
+			 
+			/* -------------------------- Movie Names Style  Start here--------------------------------------- */
+			#moviesName
+			{
+			text-align: left;
+			    font-size:20px;
+			    font-weight:normal;
+			    color: #0F1924;
+			    opacity: 1;
+			    position: absolute;
+			}
+			.movie-name0
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px;   
+			}
+			 .movie-name1
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px; 
+			}
+			 .movie-name2
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px;
+			    
+			}
+			 .movie-name3
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px;
+			}
+			.movie-name4
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px;
+			}
+			 .movie-name5
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px; 
+			}
+			 .movie-name6
+			{
+				top: 363px;
+			    width: 153px;
+			    height: 26px; 
+			}
+			.movie-name7
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px;
+			}
+			 .movie-name8
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px;
+			}
+			 .movie-name9
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px;
+			}
+			/*  -------------------------------Movie Image Style Code Start Here----------------------------------------------  */
+			#moviesImage
+			{
+			position:absolute;
+			display:block;
+			width: 299px;
+			height: 345px;
+			border-radius:10px;
+			cursor:pointer;
+			}
+			/*  -------------------------------Movie Image Style Code End Here----------------------------------------------  */
+			/*  -------------------------------Movie Division  Style Code Start Here---------------------------------------------- */
+			#movieDiv
+			{
+			position:absolute;
+			width: 299px;
+			height: 398px;
+			}
+			.movies1
+			{
+			top: 256px;
+			left: 483px;
+			}
+			.movies2
+			{
+			top: 256px;
+			left: 826px;
+			}
+			.movies3
+			{	
+			top: 256px;
+			left: 1169px;
+			}
+			.movies4
+			{
+			top: 256px;
+			left: 1512px;
+			}
+			.movies5
+			{
+			top: 752px;
+			left: 140px;
+			}
+			.movies6
+			{
+			top: 752px;
+			left: 483px;
+			}
+			.movies7
+			{
+			top: 752px;
+			left: 826px;
+			}
+			.movies8
+			{
+			top: 752px;
+			left: 1169px;
+			}
+			.movies9
+			{
+			top: 752px;
+			left: 1512px;
+			}
+			/* -------------------------------Movie Division  Style Code End Here---------------------------------------------- */
+			/* -------------------------------Movie Type Style Code Start Here---------------------------------------------- */
+			#movieType{
+			 position:absolute;
+			 width: 68px;
+			height: 21px;
+			text-align: left;
+			font-size:16px;
+			font-weight:normal;
+			color: #6B7E93;
+			opacity: 1;
+			}
+			.movie-type1
+			{
+		     top: 366px;
+		     left: 231px;
+			}
+			.movie-type2
+			{
+			   top: 366px;
+				left: 250px;
+			}
+			.movie-type3
+			{
+			   top: 366px;
+				left: 250px;
+			}
+			.movie-type4
+			{
+			   top: 366px;
+				left: 250px;
+			}
+			.movie-type5
+			{
+			   top: 366px;
+				left: 231px;
+			}
+			.movie-type6
+			{
+			   top: 366px;
+				left: 231px;
+			}
+			.movie-type7
+			{
+			   top: 366px;
+				left: 250px;
+			}
+			.movie-type8
+			{
+			   top: 366px;
+				left: 250px;
+			}
+			.movie-type9
+			{
+			   top: 366px;
+				left: 250px;
+			}
+			/* -------------------------------Movie Type Style Code End Here---------------------------------------------- */
+			/* -------------------------------MovieCount Type Style Code Start Here---------------------------------------------- */
+			#movieCount{
+			position: absolute;
+			    background-color: white;
+			    font-weight: normal;
+			    font-family: arial;
+			    left: 9px;
+			    top: 7px;
+			    width: 33px;
+			    height: 33px;
+			    border-radius: 16px;
+			    text-align: center;
+			    padding-top: 6px;
+			    padding-right: 1px;
+			    color:#0F1924;
+			
+			}
+			/* -------------------------------MovieCount Type Style Code End Here---------------------------------------------- */
+				.Star-icon1 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:757px;
+			     top: 653px;
+                font-size: 20px;
+				}
+				.Star-icon2 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:1100px;
+			     top: 653px;
+                font-size: 20px;
+				}
+				.Star-icon3 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:1443px;
+			     top: 653px;
+                font-size: 20px;
+				}
+				.Star-icon4 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:1786px;
+			     top: 653px;
+                font-size: 20px;
+				}
+				.Star-icon5 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:414px;
+			     top:1118px;
+                font-size: 20px;
+				}
+			 .Star-icon6 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:757px;
+			     top:1118px;
+                font-size: 20px;
+				}
+			 .Star-icon7 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:1100px;
+			    top:1118px;
+                font-size: 20px;
+				}
+			.Star-icon8 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:1443px;
+			     top:1118px;
+                font-size: 20px;
+				}
+			.Star-icon9 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:1786px;
+			     top:1118px;
+                font-size: 20px;
+				}
+			.star-rating{
+				position:absolute;
+				top:399px;
+				left:0px;
+				color:#F26F20;
+			}
+			/* ------------------------------------Recommanded movie List Start----------------------------------------- */
+			.row4{
+			   position:absolute;
+				top: 1198px;
+				left: 140px;
+				width: 215px;
+				height: 33px;
+				text-align: left;
+				font: normal normal bold 30px/34px Arial;
+				letter-spacing: 0px;
+				color: #0F1924;
+				opacity: 1;
+			}
+			  .firimage img {
+			  position: absolute;
+				top: 1247px;
+				left: 140px;
+				display: block;
+				width: 299px;
+				height: 345px;
+				border-radius: 5px;
+			}
+			.simage img
+			{
+			 position: absolute;
+				top: 1247px;
+				left: 483px;
+				display: block;
+				width: 299px;
+				height: 345px;
+				border-radius: 5px;
+			}
+			.timage img
+			{
+			 position: absolute;
+				top: 1247px;
+				left: 826px;
+				display: block;
+				width: 299px;
+				height: 345px;
+				border-radius: 5px;
+			}
+			.fimage img
+			{
+			    position: absolute;
+				top: 1247px;
+				left: 1169px;
+				display: block;
+				width: 299px;
+				height: 345px;
+				border-radius: 5px;
+			}
+			.fiimage img
+			{
+			    position: absolute;
+				top: 1247px;
+				left: 1512px;
+				display: block;
+				width: 299px;
+				height: 345px;
+				border-radius: 5px;
+			}
+/*----------------------------------------------- Recomamanded movie List end---------------------------------- */
+
+		/*------------------------------ Modal For Registration Start------------------------------- */
+				.modal-body {
+					position: absolute;
+					top: 228px;
+					left: 0px;
+					width: 560px;
+					height: 552px;
+					background: #FFFFFF 0% 0% no-repeat padding-box;
+					box-shadow: 0px 0px 15px #00000067;
+					border-radius: 15px;
+					opacity: 1;
+				}
+				
+				.modal-box {
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					width: 560px;
+					height: 643px;
+					background: #FFFFFF 0% 0% no-repeat padding-box;
+					box-shadow: 0px 0px 15px #00000067;
+					border-radius: 15px;
+					opacity: 1;
+				}
+				
+				.main p {
+					left: 230px;
+					top: 102px;
+					position: relative;
+					font-size: 35px;
+					
+					color: #D6346C;
+					opacity: 1;
+				}
+				
+				.main .Name {
+					position: relative;
+					left: 108px;
+					display: flex;
+					width: 53px;
+					height: 18px;
+					font-weight: 600;
+					font-size: 20px;
+					color: #0F1924;
+				}
+				
+				#registerNumber {
+					position: relative;
+					top: 100px;
+					left: 108px;
+					width: 344px;
+					padding-left: 17px;
+					height: 50px;
+					background: #FFFFFF 0% 0% no-repeat padding-box;
+					border: 1px solid #707070;
+					border-radius: 3px;
+					opacity: 1;
+				}
+				
+				#registerpassword {
+					position: relative;
+					top: 100px;
+					left: 108px;
+					width: 344px;
+					padding-left: 15px;
+					height: 50px;
+					background: #FFFFFF 0% 0% no-repeat padding-box;
+					border: 1px solid #707070;
+					border-radius: 3px;
+					opacity: 1;
+				}
+				
+				#registername {
+					position: relative;
+					top: 100px;
+					left: 108px;
+					width: 344px;
+					padding-left: 17px;
+					height: 50px;
+					background: #FFFFFF 0% 0% no-repeat padding-box;
+					border: 1px solid #707070;
+					border-radius: 3px;
+					opacity: 1;
+				}
+				
+				.main1 .MobileNumber {
+					display: flex;
+					position: relative;
+					left: 108px;
+					top: 110px;
+					font-weight: 600;
+					font-size: 16px;
+					color: #0F1924;
+				}
+				
+				.main2 .password {
+					display: flex;
+					position: relative;
+					top: 110px;
+					left: 108px;
+					font-weight: 600;
+					font-size: 16px;
+					color: #0F1924;
+				}
+				
+				.footer {
+					position: relative;
+					top: 130px;
+					left: 108px;
+					width: 344px;
+					height: 50px;
+					border-radius: 3px;
+					opacity: 1;
+				}
+				
+				.footer input {
+					width: 344px;
+					height: 50px;
+					font-size: 20px;
+					color: #FFFFFF;
+					border: none;
+					background: #D6346C 0% 0% no-repeat padding-box;	
+					opacity: 1;
+					top: -12px;
+					cursor: pointer;
+				}
+			/*----------------------------- Modal Registration End -----------------------------------*/
+				
+			/* ----------------------------- Modal Login Start ----------------------------------------*/
+				.modal-body {
+					position: absolute;
+					top: 228px;
+					left: 0px;
+					width: 560px;
+					height: 552px;
+					background: #FFFFFF 0% 0% no-repeat padding-box;
+					box-shadow: 0px 0px 15px #00000067;
+					border-radius: 15px;
+					opacity: 1;
+				}
+				
+				.main {
+					position: absolute;
+					top: 0px;
+					left: 0px;
+				}
+				
+				.main p {
+					left: 237px;
+					top: 102px;
+					position: relative;
+					font-size: 35px;
+					color: #D6346C;
+					opacity: 1;
+				}
+				
+				#loginUser {
+					position: relative;
+					top: 100px;
+					padding: 17px;
+					left: 108px;
+					width: 344px;
+					height: 50px;
+					background: #FFFFFF 0% 0% no-repeat padding-box;
+					border: 1px solid #707070;
+					border-radius: 3px;
+					opacity: 1;
+				}
+				
+				#loginpassword {
+					position: relative;
+					top: 100px;
+					padding: 15px;
+					left: 108px;
+					width: 344px;
+					height: 50px;
+					background: #FFFFFF 0% 0% no-repeat padding-box;
+					border: 1px solid #707070;
+					border-radius: 3px;
+					opacity: 1;
+				}
+				
+				.main input:focus {
+					outline: none;
+				}
+				
+				.main1 .Username {
+					display: flex;
+					position: relative;
+					left: 108px;
+					top: 110px;
+					font-weight: 600;
+					font-size: 20px;
+					color: #0F1924;
+				}
+				
+				.main1 .Username:focus {
+					outline: none;
+				}
+				
+				.main2 .password {
+					display: flex;
+					position: relative;
+					top: 110px;
+					left: 108px;
+					font-weight: 600;
+					font-size: 16px;
+					color: #0F1924;
+				}
+				
+				.main2 .password:focus {
+					outline: none;
+				}
+				
+				.footer {
+					position: relative;
+					top: 130px;
+					left: 108px;
+					width: 344px;
+					height: 50px;
+					border-radius: 3px;
+					opacity: 1;
+				}
+				
+				.footer input {
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					font-size: 20px;
+					color: #FFFFFF;
+					background: #D6346C 0% 0% no-repeat padding-box;
+					
+					opacity: 1;
+					cursor: pointer;
+				}
+				
+	     /* ----------------------------- Modal Login END ----------------------------------------*/
+
+				#checkError {
+					color: red;
+					display: block;
+					position: absolute;
+					top: 50px;
+					left: 170px;
+					width: 220px;
+				}
+				
+				#modal-cancel-btn {
+					position: absolute;
+					top: 25%;
+					left: 30%;
+					width: 220px;
+					background-color: green;
+				}
+				
+				#register-show {
+					position: absolute;
+					top: 228px;
+					left: 0px;
+					width: 560px;
+					height: 640px;
+					background: #FFFFFF 0% 0% no-repeat padding-box;
+					box-shadow: 0px 0px 15px #00000067;
+					border-radius: 15px;
+					opacity: 1;
+				}
+				
+				#register-show {
+					width: 568px;
+					height: 384px;
+				}
+				
+				/*-------------------- modal Login page End---------------------------- */
+</style>
+<script> 
+function open(){
+		 debugger;
+			$.ajax({
+				type : "POST",
+				headers : {
+					'Content-Type' : 'application/json'
+				},
+				crossDomain : true,
+				url : "/movie/AllMovies", //this is my servlet
+
+				success : function(data)
+				{
+					debugger;
+					var products=JSON.parse(data)
+					console.log(products["movies"])
+					
+					for (var i = 0; i < products["movies"].length; i++)
+						{
+						var movieDiv = document.createElement('div');
+						movieDiv.className = 'movies'+i;
+						movieDiv.setAttribute("id","movieDiv");
+						 
+						var movieName = document.createElement('p');
+						movieName.textContent = products["movies"][i].movie_names;
+						movieName.className = 'movie-name'+i;
+						movieName.setAttribute("id","moviesName");
+							
+					 	
+						var movieImage = document.createElement('img');
+						movieImage.src = products["movies"][i].movie_Images;
+						movieImage.className = 'movie-img'+i;
+						movieImage.setAttribute("id","moviesImage");
+							
+						var movieCount = document.createElement('p');
+						movieCount.textContent = products["movies"][i].movie_count;
+						movieCount.className = 'movie-count'+i;
+						movieCount.setAttribute("id","movieCount");
+						
+						var movieType =document.createElement('p');
+						movieType.textContent=products["movies"][i].movie_type;
+						movieType.className='movie-type'+i;
+						movieType.setAttribute=("id","movieType");
+						
+						var starRating = document.createElement('div');
+						starRating.className = 'star-rating';
+					
+						var fullStars = Math.floor(products["movies"][i].star_count);
+						var halfStars = Math.round((products["movies"][i].star_count - fullStars) * 2);
+					
+						for (var j = 0; j < fullStars; j++) {
+						  var star = document.createElement('i');
+						  star.className = 'material-icons';
+						  star.textContent = 'star';
+						  starRating.appendChild(star);
+						}
+						if (halfStars > 0) {
+						  var halfStar = document.createElement('i');
+						  halfStar.className = 'material-icons';
+						  halfStar.textContent = 'star_half';
+						  starRating.appendChild(halfStar);
+						}
+						for (var j = 0; j < 5 - (fullStars + halfStars); j++) {
+						  var notFillStar = document.createElement('i');
+						notFillStar.className = 'material-icons';
+						notFillStar.textContent = 'star_border';
+						  starRating.appendChild(notFillStar);
+						}
+						movieDiv.appendChild(starRating);
+						movieDiv.appendChild(movieImage);
+						movieDiv.appendChild(movieName);
+						movieDiv.appendChild(movieCount);
+						movieDiv.appendChild(movieType);
+						document.body.appendChild(movieDiv);
+		    						}
+				},     
+				error : function(jqXHR, exception) {
+				}		
+			});
+		}
+	 function dataStorage() {
+				var name = document.getElementById("registername").value;
+				var mobileNumber = document.getElementById("registerNumber").value;
+				var password = document.getElementById("registerpassword").value;
+				var data = {
+						"user_name" : name,
+						"phone_number" : mobileNumber,
+						"cus_Password" : password
+				};
+				console.log(data);
+				$.ajax({
+					type : "POST",
+					headers : {
+						'Content-Type' : 'application/json'
+					},
+					url : "/movie/Customers", //this is my servlet
+					dataType:'json',
+					data : JSON.stringify(data),
+					
+					success : function(response)
+					{
+						var receivedData=response;
+						console.log( "newCustomers" +receivedData);
+	                     if(receivedData.status=="201")
+	                     {	                    	 
+	                    	 showModal();	               						
+	                     }	                    
+	                     else                   	
+	                     {
+	                    	 showModal1();	                    	 	 						
+	                     }
+					},
+					error : function(jqXHR, exception) {
+				
+					}
+				});
+			}
+ 
+            /* ----------------------------MODAL REGISTRATION START--------------------------------- */
+			 function showModal(){
+			var modal =
+			document.createElement('div');
+			modal.classList.add('modal', 'fade');
+			modal.setAttribute('tabindex', '-1');
+			modal.setAttribute('aria-labelledby', 'exampleModalLabel');
+			modal.setAttribute('aria-hidden', 'true');
+			modal.innerHTML = `
+			<div class="modal-dialog">
+			<div class="modal-content">
+			<div class="modal-body" id="register-show">
+			<h3 class="modalHeading">You are  Already Registered and Please Login</h3>
+			<button type="button" id="modal-cancel-btn" class="btn btn-secondary" data-bs-dismiss="modal" onclick="redirect()">Ok</button>
+			</div>
+			</div>
+			</div>`;
+			document.body.appendChild(modal);
+			var firstModalInstance = new bootstrap.Modal(modal);
+			firstModalInstance.show();
+			}
+			function redirect()
+			{
+				window.location.href = "http://localhost:8080/movie/Customers?";
+			}
+			 /* ----------------------------MODAL REGISTRATION END--------------------------------- */
+			  /* ----------------------------MODAL LOGIN START------------------------------------- */
+			function showModal1(){
+				var modal =
+				document.createElement('div');
+				modal.classList.add('modal', 'fade');
+				modal.setAttribute('tabindex', '-1');
+				modal.setAttribute('aria-labelledby', 'exampleModalLabel');
+				modal.setAttribute('aria-hidden', 'true');
+				modal.innerHTML = `
+				<div class="modal-dialog">
+				<div class="modal-content">
+				<div class="modal-body" id="register-show">
+				<h3 class="modalHeading">Your Id Registered Successfully & Please Login</h3>
+				<button type="button" id="modal-cancel-btn" class="btn btn-secondary" data-bs-dismiss="modal" onclick="redirect4()">Ok</button>
+				</div>
+				</div>
+				</div>`;
+				document.body.appendChild(modal);
+				var secondModalInstance = new bootstrap.Modal(modal);
+				secondModalInstance.show();
+				}
+				function redirect4()
+				{
+					window.location.href = "http://localhost:8080/movie/Customers";
+				}
+			
+	/* ----------------------------MODAL LOGIN START------------------------------------- */
+	/* ----------------------------MODAL LOGIN VERIFICATION------------------------------------- */
+ var userName;
+ function dataLogin() {
+	 debugger;
+		var mobileNumber = document.getElementById("loginUser").value;
+		var password = document.getElementById("loginpassword").value;
+		var data = {
+				"phone_number" : mobileNumber,
+				"cus_Password" : password
+		};
+		console.log(data);
+		$.ajax({
+			type : "POST",
+			headers : {
+				'Content-Type' : 'application/json'
+			},
+			url : "/movie/Movies", //this is my servlet
+			data : JSON.stringify(data),
+			dataType:'json',
+			success : function(response)	
+			{
+				debugger;
+				var loginData=response;
+				console.log(loginData);
+				 userName=loginData.name;
+              if(loginData.status=="201")             	 
+             	 {
+            	   registerShow();
+             	 }
+              else
+             	 {
+            	  registerShow1();
+             	 }
+				console.log(data);
+			},
+			error : function(jqXHR, exception) {
+				// Our error logic here
+			var msg = '';
+				if (jqXHR.status === 0) {
+					msg = 'Not connect.\n Verify Network.';
+				} else if (jqXHR.status == 404) {
+					msg = 'Requested page not found. [404]';
+				} else if (jqXHR.status == 500) {
+					msg = 'Internal Server Error [500].';
+				} else if (exception === 'parsererror') {
+					msg = 'Requested JSON parse failed.';
+				} else if (exception === 'timeout') {
+					msg = 'Time out error.';
+				} else if (exception === 'abort') {
+					msg = 'Ajax request aborted.';
+				} else if (jqXHR.status === 401) {
+					window.location.href = "/smco/SessionFailed.jsp"
+				} else {
+					msg = 'Uncaught Error.\n' + jqXHR.responseText;
+				} 
+			}
+		});
+	}
+ /* ----------------------------MODAL LOGIN VERIFICATION END------------------------------------- */
+ 
+ /* --------------------------------LOGIN SUCCESS MODAL -----------------------------------------*/
+		 function registerShow()
+		 {
+				 var modal =
+				 document.createElement('div');
+				 modal.classList.add('modal', 'fade');
+				 modal.setAttribute('tabindex', '-1');
+				 modal.setAttribute('aria-labelledby', 'exampleModalLabel');
+				 modal.setAttribute('aria-hidden', 'true');
+				 modal.innerHTML = `
+				 <div class="modal-dialog">
+				 <div class="modal-content" id="registerShow">
+				 <div class="modal-body" >
+				 <h3 class="modalHeading">Your Logged In Successfullly</h3>
+				 <button type="button" id="modal-cancel-btn" class="btn btn-secondary" data-bs-dismiss="modal" onclick="redirect1()">Ok</button>
+				 </div>
+				 </div>
+				 </div>`;
+				 document.body.appendChild(modal);
+				 var firstModalInstance = new bootstrap.Modal(modal);
+				 firstModalInstance.show();
+				 }
+				 function redirect1()
+				 {
+					 window.location.href = "http://localhost:8080/movie/Movies?name="+userName;
+					
+				 }
+ 			/*----------------------------------- LOGIN FAILURE MODAL-----------------------------------*/
+			 function registerShow1()
+			 {
+					 var modal =
+					 document.createElement('div');
+					 modal.classList.add('modal', 'fade');
+					 modal.setAttribute('tabindex', '-1');
+					 modal.setAttribute('aria-labelledby', 'exampleModalLabel');
+					 modal.setAttribute('aria-hidden', 'true');
+					 modal.innerHTML = `
+					 <div class="modal-dialog">
+					 <div class="modal-content">
+					 <div class="modal-body">
+					 <h3 class="modalHeading">Your Mobile number or password is Incorrect please check it or you are not an registred user register to login</h3>
+					 <button type="button" id="modal-cancel-btn" class="btn btn-secondary" data-bs-dismiss="modal" onclick="redirect()">Ok</button>
+					 </div>
+					 </div>
+					 </div>`;
+					 document.body.appendChild(modal);
+					 var secondModalInstance = new bootstrap.Modal(modal);
+					 secondModalInstance.show();
+					 }
+					 function redirect()
+					 {
+						 window.location.href = "http://localhost:8080/movie/Customers";
+					 }
+		</script>
+</head>
+<body onload="open()">
+	<div class="container1">
+		<div class="row">
+			<!-- Header portion will start -->
+			<div class="header1">
+				<div class="logo">
+					<h4>SD Movie</h4>
+					<i class="bi bi-caret-left"></i>
+					<p class="p-name"></p>
+				</div>
+				<div class="content_icon1">
+					<a href="">
+						<button id="first_button">Admin</button>
+					</a>
+				</div>
+				<div class="content_icon2">
+					<button id="second_button" data-bs-toggle="modal"data-bs-target="#exampleModal-1">Login</button>
+				</div>
+				<div class="content_icon3">
+					<button id="third_button" data-bs-toggle="modal"data-bs-target="#exampleModal">Register</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row1">
+		<div class="container_search">
+			<input type="text" placeholder="Search Movies, Theaters"> <i class="bi bi-search"></i>
+		</div>
+	</div>
+	<div class="row2">
+			<h3>Trending</h3>
+		</div>
+		 <div class="Star-icon0">
+					   <i class="bi bi-plus-circle"></i>
+		    </div>
+		  <div class="Star-icon1">
+		               <i class="bi bi-plus-circle"></i>
+		  </div>
+		  <div class="Star-icon2">
+		              <i class="bi bi-plus-circle"></i>
+		  </div>
+		<div class="Star-icon3">
+		              <i class="bi bi-plus-circle"></i>
+		  </div>
+		<div class="Star-icon4">
+		              <i class="bi bi-plus-circle"></i>
+		  </div> 
+		  <div class="Star-icon5">
+		              <i class="bi bi-plus-circle"></i>
+		  </div>
+		  <div class="row3">
+			<h3>Top 10 Movie List</h3>
+		</div>
+		  <div class="Star-icon6">
+		              <i class="bi bi-plus-circle"></i>
+		  </div>
+		  <div class="Star-icon7">
+		              <i class="bi bi-plus-circle"></i>
+		  </div>
+		  <div class="Star-icon8">
+		              <i class="bi bi-plus-circle"></i>
+		  </div>
+		  <div class="Star-icon9">
+		              <i class="bi bi-plus-circle"></i>
+		  </div> 
+		  <div class="row4">
+						<h3>
+							<b>Trending</b>
+						</h3>
+					</div>
+					<div class="row5">
+						<div class="firimage">
+							<a href=""> <img
+								src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images">
+							</a>
+						</div>
+						<div class="simage">
+							<a href=""> <img
+								src="https://i9.behindwoods.com/tamil-movies/ponniyin-selvan-1/thumbnails/related-section-image-ponniyin-selvan-1-7.jpg">
+							</a>
+						</div>
+						<div class="timage">
+							<a href=""> <img
+								src="https://filmyspace.in/wp-content/uploads/2022/01/VIP-300x300.jpeg">
+							</a>
+						</div>
+						<div class="fimage">
+							<a href=""> <img
+								src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-RUKoV1oFexo%2FUQwmcanVxxI%2FAAAAAAAAMGM%2FgwOG8K6ETqk%2Fs400%2FAyan%2B(2009)%2BHindi%2BDubbed%2BTamil%2BMovie.jpg&f=1&nofb=1&ipt=c090298b621a119af4465c9f2416db5430bb54fb6fe2d310ee4e5c7f4257dfb2&ipo=images">
+							</a>
+						</div>
+						<div class="fiimage">
+							<a href=""> <img
+								src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftotalreporter.com%2Fwp-content%2Fuploads%2F2022%2F06%2FVikram-300x280.jpg&f=1&nofb=1&ipt=b203a2513975e6b34894f494fab9212d6c251536331551280a21008c32adfda5&ipo=images">
+							</a>
+						</div>
+					</div>
+		  
+	
+	
+	<!-----------------------------------------Modal For Registration Code ----------------------------------->
+	
+	<div class="modal fade" id="exampleModal" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog ">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="modal-box">
+						<div class="main">
+							<p>Register</p>
+							<p class="Name">Name</p>
+							<input type="text" id="registername"placeholder="Enter your name" name="user_name">
+							<div class="main1">
+								<p class="MobileNumber">Mobile Number</p>
+								<input type="number" id="registerNumber"
+									placeholder="Enter your Number" name="phone_number"
+									oninput="submit(this.value)"> <span id="numberError"
+									style="color: red; display: none;">Please enter a valid
+									10-digit number</span>
+							</div>
+							<div class="main2">
+								<p class="password">Create Password</p>
+								<input type="password" id="registerpassword"placeholder="Enter your password" name="cus_password">
+							</div>
+							<div class="footer">
+								<input type="submit" value=Register id="getValue"onclick="dataStorage()" disabled>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		const numberInput = document.getElementById("registerNumber");
+		const numberError = document.getElementById("numberError");
+		numberInput.addEventListener("blur", function() {
+		  const number = numberInput.value;
+		  if (number.length === 10 && !isNaN(number)) {
+		    numberError.style.display = "none";
+		  } else {
+		    numberError.style.display = "block";
+		  }
+		});
+		 function submit(value)
+		 {
+			 debugger;
+			 if(value.length == 10 ){
+					document.getElementById("getValue").disabled = false;
+				}
+				else{
+					document.getElementById("getValue").disabled =true;
+				}
+		 }
+	</script>
+	
+	<!------------------------------------- Model For Login Code-------------------------------------------------->
+	<div class="modal fade" id="exampleModal-1" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="main">
+						<p>Login</p>
+						<div class="main1">
+							<p class="Username">Mobile Number</p>
+							<input type="number" id="loginUser"placeholder="Enter your mobile number"oninput="loginSubmit(this.value)">
+							 <span id="checkError"style="color: red; display: none;">
+							 Please enter a vaild10-digit number
+							 </span>
+						</div>
+						<div class="main2">
+							<p class="password">Password</p>
+							<input type="password" id="loginpassword" placeholder="Enter Password">
+						</div>
+						<div class="footer">
+							<input type="submit" id="getSubmit" value="Login" onclick="dataLogin()" disabled>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+			const cusInput = document.getElementById("loginUser");
+			const cusError = document.getElementById("checkError");		
+			cusInput.addEventListener("blur", function() {
+			  const number = cusInput.value;
+			  if (number.length === 10 && !isNaN(number)) {
+				  cusError.style.display = "none";
+			  } else {
+				  cusError.style.display = "block";
+			  }
+			});
+			
+		 	function loginSubmit(value)
+			 {
+			 debugger;
+			 if(value.length == 10 ){
+					document.getElementById("getSubmit").disabled = false;
+				}
+				else{
+					document.getElementById("getSubmit").disabled =true;
+				}
+			 }
+</script>
+</body>
+</html>

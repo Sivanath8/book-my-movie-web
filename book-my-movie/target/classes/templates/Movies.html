@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Book My Movie</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<link rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous">
+   		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+   		<style type="text/css">
+           /* Header portion Start */
+   			.container1
+   			 {
+				width: 100%;
+				height: 1180px;
+              }
+
+			.header1 
+			{
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				width: 1920px;
+				height: 100px;
+				background: #0F1924 0% 0% no-repeat padding-box;
+				opacity: 1;
+				z-index: 30;
+			}
+
+			.header1 .logo
+			{
+				position: absolute;
+				top: 24px;
+				left: 150px;
+				width: 134px;
+				height: 53px;
+				border: 3px solid #FFFFFF;
+				opacity: 1;
+			}
+
+			.logo h4 
+			{
+				color: #FAFAFA;
+				top: 9px;
+				position: relative;
+				text-align: center;
+			}
+			.logo i
+			{
+			    font-size: 50px;
+			    color: white;
+			    top: -15px;
+			    left: 119px;
+			    position: absolute;
+			}
+			.content_icon1 
+			{
+			position: absolute;
+			top: 34px;
+			left: 1537px;
+			width: 140px;
+			height: 33px;
+			text-align: left;
+			letter-spacing: 0px;
+			opacity: 1;
+			}
+
+			.content_icon1 #first_button 
+			{
+			font-family: arial;
+			font-size: 25px;
+			background-color: #0F1924;
+			color: #FFFFFF;
+			cursor: pointer;
+			border: none;
+			}
+            .content_icon2 i 
+            {
+            	position: absolute;
+			    top: 13px;
+			    left: 1663px;
+			    width: 53px;
+			    height: 53px;
+			    font-size: 50px;
+			    color: white;
+            }
+            .p-name
+            {
+            	position: absolute;
+                top: 35px;
+				left: 1734px;
+				width: 140px;
+				height: 33px;
+				text-align: left;
+				font-size: 25px;
+				letter-spacing: 0px;
+				color: #FFFFFF;
+				opacity: 1;
+            }
+         /* Header Portion Was Completed */
+		/*Search Portion Will Start*/
+            .container_search
+			{
+				position: absolute;
+				top: 130px;
+				left: 456px;
+				width: 1008px;
+				height: 50px;
+				background: #FFFFFF 0% 0% no-repeat padding-box;
+				box-shadow: 0px 0px 3px #053B76AD;
+				opacity: 1;
+			}
+			.container_search i
+			{
+				position: absolute;
+			    top: 0px;
+			    font-size: 30px;
+			    bottom: 10px;
+			    right: 21px;
+			    left: 950px;
+			    cursor: pointer;	
+			}
+			.container_search input
+			{
+				position: absolute;
+				border: none;
+				width: 1008px;
+				height: 50px;
+				padding-left: 48px;
+				font-family: Arial;
+				font-size: 16px;
+			}
+			/*Search Portion Will End*/
+			/*Movie Image Portion Starts*/
+
+			.row2
+			{
+				position: relative;
+				top: 207px;
+				left: 140px;
+				width: 102px;
+				height: 33px;
+				text-align: left;
+				letter-spacing: 0px;
+				color: #0F1924;
+				opacity: 1;
+			}
+			
+			/* All Movies Details Start */
+			.movies0
+			{
+			position:absolute;
+			top: 256px;
+			left: 140px;
+			width: 299px;
+			height: 398px;
+			}
+			.movies0 img
+			{
+			position:absolute;
+			display:block;
+			width: 299px;
+			height: 345px;
+			border-radius:10px;
+			cursor:pointer;
+			}
+			.movies0 .movie-count0
+			{
+			   position: absolute;
+			    background-color: white;
+			    font-weight: normal;
+			    font-family: arial;
+			    left: 9px;
+			    top: 7px;
+			    width: 33px;
+			    height: 33px;
+			    border-radius: 16px;
+			    text-align: center;
+			    padding-top: 6px;
+			    padding-right: 1px;
+			    color:#0F1924;
+			}
+			.movies0 .movie-name0
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px;
+			    text-align: left;
+			    font-size:20px;
+			    font-weight:normal;
+			    letter-spacing: 0px;
+			    color: #0F1924;
+			    opacity: 1;
+			    position: absolute;
+			    
+			}
+			.movie-type0
+			{
+			   position:absolute;
+			   top: 366px;
+				left: 231px;
+				width: 68px;
+				height: 21px;
+				text-align: left;
+				font-size:16px;
+				font-weight:normal;
+				letter-spacing: 0px;
+				color: #6B7E93;
+				opacity: 1;
+			}
+		
+				.Star-icon0 i
+				{
+				position:absolute;
+				color:#0F1924;
+				left: 414px;
+			    top: 653px;
+			    font-size: 20px;
+				}
+			.movies1
+			{
+			position:absolute;
+			top: 256px;
+			left: 483px;
+			width: 299px;
+			height: 398px;
+			}
+			.movies1 img
+			{
+			position:absolute;
+			display:block;
+			width: 299px;
+			height: 345px;
+			border-radius:10px;
+			cursor:pointer;
+			}
+			 .movie-count1
+			{
+			   position: absolute;
+			    background-color: white;
+			    font-weight: normal;
+			    font-family: arial;
+			    left: 9px;
+			    top: 7px;
+			    width: 33px;
+			    height: 33px;
+			    border-radius: 16px;
+			    text-align: center;
+			    padding-top: 6px;
+			    padding-right: 1px;
+			    color:#0F1924;
+			}
+			 .movie-name1
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px;
+			    text-align: left;
+			    font-size:20px;
+			    font-weight:normal;
+			    letter-spacing: 0px;
+			    color: #0F1924;
+			    opacity: 1;
+			    position: absolute;
+			    
+			}
+			.movie-type1
+			{
+			   position:absolute;
+			   top: 366px;
+				left: 231px;
+				width: 68px;
+				height: 21px;
+				text-align: left;
+				font-size:16px;
+				font-weight:normal;
+				letter-spacing: 0px;
+				color: #6B7E93;
+				opacity: 1;
+			}
+	
+				.Star-icon1 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:757px;
+			     top: 653px;
+                font-size: 20px;
+				}
+			.movies2
+			{
+			position:absolute;
+			top: 256px;
+			left: 826px;
+			width: 299px;
+			height: 398px;
+			}
+			.movies2 img
+			{
+			position:absolute;
+			display:block;
+			width: 299px;
+			height: 345px;
+			border-radius:10px;
+			cursor:pointer;
+			}
+			 .movie-count2
+			{
+			   position: absolute;
+			    background-color: white;
+			    font-weight: normal;
+			    font-family: arial;
+			    left: 9px;
+			    top: 7px;
+			    width: 33px;
+			    height: 33px;
+			    border-radius: 16px;
+			    text-align: center;
+			    padding-top: 6px;
+			    padding-right: 1px;
+			    color:#0F1924;
+			}
+			 .movie-name2
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px;
+			    text-align: left;
+			    font-size:20px;
+			    font-weight:normal;
+			    letter-spacing: 0px;
+			    color: #0F1924;
+			    opacity: 1;
+			    position: absolute;
+			    
+			}
+			.movie-type2
+			{
+			   position:absolute;
+			   top: 366px;
+				left: 250px;
+				width: 68px;
+				height: 21px;
+				text-align: left;
+				font-size:16px;
+				font-weight:normal;
+				letter-spacing: 0px;
+				color: #6B7E93;
+				opacity: 1;
+			}
+		
+				.Star-icon2 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:1100px;
+			     top: 653px;
+                font-size: 20px;
+				}
+			.movies3
+			{
+			position:absolute;
+			top: 256px;
+			left: 1169px;
+			width: 299px;
+			height: 398px;
+			}
+			.movies3 img
+			{
+			position:absolute;
+			display:block;
+			width: 299px;
+			height: 345px;
+			border-radius:10px;
+			cursor:pointer;
+			}
+			 .movie-count3
+			{
+			   position: absolute;
+			    background-color: white;
+			    font-weight: normal;
+			    font-family: arial;
+			    left: 9px;
+			    top: 7px;
+			    width: 33px;
+			    height: 33px;
+			    border-radius: 16px;
+			    text-align: center;
+			    padding-top: 6px;
+			    padding-right: 1px;
+			    color:#0F1924;
+			}
+			 .movie-name3
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px;
+			    text-align: left;
+			    font-size:20px;
+			    font-weight:normal;
+			    letter-spacing: 0px;
+			    color: #0F1924;
+			    opacity: 1;
+			    position: absolute;
+			    
+			}
+			.movie-type3
+			{
+			   position:absolute;
+			   top: 366px;
+				left: 250px;
+				width: 68px;
+				height: 21px;
+				text-align: left;
+				font-size:16px;
+				font-weight:normal;
+				letter-spacing: 0px;
+				color: #6B7E93;
+				opacity: 1;
+			}
+		
+				.Star-icon3 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:1443px;
+			     top: 653px;
+                font-size: 20px;
+				}
+			
+			.movies4
+			{
+			position:absolute;
+			top: 256px;
+			left: 1512px;
+			width: 299px;
+			height: 398px;
+			}
+			.movies4 img
+			{
+			position:absolute;
+			display:block;
+			width: 299px;
+			height: 345px;
+			border-radius:10px;
+			cursor:pointer;
+			}
+			 .movie-count4
+			{
+			   position: absolute;
+			    background-color: white;
+			    font-weight: normal;
+			    font-family: arial;
+			    left: 9px;
+			    top: 7px;
+			    width: 33px;
+			    height: 33px;
+			    border-radius: 16px;
+			    text-align: center;
+			    padding-top: 6px;
+			    padding-right: 1px;
+			    color:#0F1924;
+			}
+			 .movie-name4
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px;
+			    text-align: left;
+			    font-size:20px;
+			    font-weight:normal;
+			    letter-spacing: 0px;
+			    color: #0F1924;
+			    opacity: 1;
+			    position: absolute;
+			    
+			}
+			.movie-type4
+			{
+			   position:absolute;
+			   top: 366px;
+				left: 250px;
+				width: 68px;
+				height: 21px;
+				text-align: left;
+				font-size:16px;
+				font-weight:normal;
+				letter-spacing: 0px;
+				color: #6B7E93;
+				opacity: 1;
+			}
+		
+				.Star-icon4 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:1786px;
+			     top: 653px;
+                font-size: 20px;
+				}
+			
+			.movies5
+			{
+			position:absolute;
+			top: 718px;
+			left: 140px;
+			width: 299px;
+			height: 398px;
+			}
+			.movies5 img
+			{
+			position:absolute;
+			display:block;
+			width: 299px;
+			height: 345px;
+			border-radius:10px;
+			cursor:pointer;
+			}
+			 .movie-count5
+			{
+			   position: absolute;
+			    background-color: white;
+			    font-weight: normal;
+			    font-family: arial;
+			    left: 9px;
+			    top: 7px;
+			    width: 33px;
+			    height: 33px;
+			    border-radius: 16px;
+			    text-align: center;
+			    padding-top: 6px;
+			    padding-right: 1px;
+			    color:#0F1924;
+			}
+			 .movie-name5
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px;
+			    text-align: left;
+			    font-size:20px;
+			    font-weight:normal;
+			    letter-spacing: 0px;
+			    color: #0F1924;
+			    opacity: 1;
+			    position: absolute;
+			    
+			}
+			.movie-type5
+			{
+			   position:absolute;
+			   top: 366px;
+				left: 231px;
+				width: 68px;
+				height: 21px;
+				text-align: left;
+				font-size:16px;
+				font-weight:normal;
+				letter-spacing: 0px;
+				color: #6B7E93;
+				opacity: 1;
+			}
+		
+				.Star-icon5 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:414px;
+			     top:1118px;
+                font-size: 20px;
+				}
+			
+			.movies6
+			{
+			position:absolute;
+			top: 718px;
+			left: 483px;
+			width: 299px;
+			height: 398px;
+			cursor:pointer;
+			}
+			.movies6 img
+			{
+			position:absolute;
+			display:block;
+			width: 299px;
+			height: 345px;
+			border-radius:10px;
+			}
+			 .movie-count6
+			{
+			   position: absolute;
+			    background-color: white;
+			    font-weight: normal;
+			    font-family: arial;
+			    left: 9px;
+			    top: 7px;
+			    width: 33px;
+			    height: 33px;
+			    border-radius: 16px;
+			    text-align: center;
+			    padding-top: 6px;
+			    padding-right: 1px;
+			    color:#0F1924;
+			}
+			 .movie-name6
+			{
+				top: 363px;
+			    width: 153px;
+			    height: 26px;
+			    text-align: left;
+			    font-size:20px;
+			    font-weight:normal;
+			    letter-spacing: 0px;
+			    color: #0F1924;
+			    opacity: 1;
+			    position: absolute;
+			    
+			}
+			.movie-type6
+			{
+			   position:absolute;
+			   top: 366px;
+				left: 231px;
+				width: 68px;
+				height: 21px;
+				text-align: left;
+				font-size:16px;
+				font-weight:normal;
+				letter-spacing: 0px;
+				color: #6B7E93;
+				opacity: 1;
+			}
+			 .Star-icon6 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:757px;
+			     top:1118px;
+                font-size: 20px;
+				}
+			.movies7
+			{
+			position:absolute;
+			top: 718px;
+			left: 826px;
+			width: 299px;
+			height: 398px;
+			}
+			.movies7 img
+			{
+			position:absolute;
+			display:block;
+			width: 299px;
+			height: 345px;
+			border-radius:10px;
+			cursor:pointer;
+			}
+			 .movie-count7
+			{
+			   position: absolute;
+			    background-color: white;
+			    font-weight: normal;
+			    font-family: arial;
+			    left: 9px;
+			    top: 7px;
+			    width: 33px;
+			    height: 33px;
+			    border-radius: 16px;
+			    text-align: center;
+			    padding-top: 6px;
+			    padding-right: 1px;
+			    color:#0F1924;
+			}
+			 .movie-name7
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px;
+			    text-align: left;
+			    font-size:20px;
+			    font-weight:normal;
+			    letter-spacing: 0px;
+			    color: #0F1924;
+			    opacity: 1;
+			    position: absolute;
+			    
+			}
+			.movie-type7
+			{
+			   position:absolute;
+			   top: 366px;
+				left: 250px;
+				width: 68px;
+				height: 21px;
+				text-align: left;
+				font-size:16px;
+				font-weight:normal;
+				letter-spacing: 0px;
+				color: #6B7E93;
+				opacity: 1;
+			}
+			 .Star-icon7 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:1100px;
+			    top:1118px;
+                font-size: 20px;
+				}
+			.movies8
+			{
+			position:absolute;
+			top: 718px;
+			left: 1169px;
+			width: 299px;
+			height: 398px;
+			cursor:pointer;
+			}
+			.movies8 img
+			{
+			position:absolute;
+			display:block;
+			width: 299px;
+			height: 345px;
+			border-radius:10px;
+			}
+			 .movie-count8
+			{
+			   position: absolute;
+			    background-color: white;
+			    font-weight: normal;
+			    font-family: arial;
+			    left: 9px;
+			    top: 7px;
+			    width: 33px;
+			    height: 33px;
+			    border-radius: 16px;
+			    text-align: center;
+			    padding-top: 6px;
+			    padding-right: 1px;
+			    color:#0F1924;
+			}
+			 .movie-name8
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px;
+			    text-align: left;
+			    font-size:20px;
+			    font-weight:normal;
+			    letter-spacing: 0px;
+			    color: #0F1924;
+			    opacity: 1;
+			    position: absolute;
+			    
+			}
+			.movie-type8
+			{
+			   position:absolute;
+			   top: 366px;
+				left: 250px;
+				width: 68px;
+				height: 21px;
+				text-align: left;
+				font-size:16px;
+				font-weight:normal;
+				letter-spacing: 0px;
+				color: #6B7E93;
+				opacity: 1;
+			}
+			.Star-icon8 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:1443px;
+			     top:1118px;
+                font-size: 20px;
+				}
+			.movies9
+			{
+			position:absolute;
+			top: 718px;
+			left: 1512px;
+			width: 299px;
+			height: 398px;
+			}
+			.movies9 img
+			{
+			position:absolute;
+			display:block;
+			width: 299px;
+			height: 345px;
+			border-radius:10px;
+			cursor:pointer;
+			}
+			 .movie-count9
+			{
+			   position: absolute;
+			    background-color: white;
+			    font-weight: normal;
+			    font-family: arial;
+			    left: 9px;
+			    top: 7px;
+			    width: 33px;
+			    height: 33px;
+			    border-radius: 16px;
+			    text-align: center;
+			    padding-top: 6px;
+			    padding-right: 1px;
+			    color:#0F1924;
+			}
+			 .movie-name9
+			{
+				top: 363px;
+			    width: 77px;
+			    height: 26px;
+			    text-align: left;
+			    font-size:20px;
+			    font-weight:normal;
+			    letter-spacing: 0px;
+			    color: #0F1924;
+			    opacity: 1;
+			    position: absolute;
+			    
+			}
+			.movie-type9
+			{
+			   position:absolute;
+			   top: 366px;
+				left: 250px;
+				width: 68px;
+				height: 21px;
+				text-align: left;
+				font-size:16px;
+				font-weight:normal;
+				letter-spacing: 0px;
+				color: #6B7E93;
+				opacity: 1;
+			}
+			.Star-icon9 i
+				{
+				position:absolute;
+				color:#0F1924;
+				 left:1786px;
+			     top:1118px;
+                font-size: 20px;
+				}
+			.star-rating{
+				position:absolute;
+				top:399px;
+				left:0px;
+				color:#F26F20;
+			}
+			.logo a
+			{
+			text-decoration:none;
+			}
+		</style>
+
+</head>
+<body onload="open();userName();">
+	<div class="container1">
+		<div class="row">
+			<!-- header Started in the below -->
+			<div class="header1">
+				 <div class="logo">
+				 <a href="http://localhost:8080/movie/Customers">
+				 	<h4> SD Movie</h4>
+				 	</a>
+				 	<i class="bi bi-caret-left"></i>
+				 </div>
+					<div class="content_icon1">
+						<a href="">
+							<button id="first_button">Admin</button>
+						</a>
+					</div>
+					<div class="content_icon2">
+						<i class="bi bi-person-circle"></i>
+						<script type="text/javascript">
+						function userName(){
+							const UrlParam = new URLSearchParams(window.location.search);
+							var userName = UrlParam.get('name');
+							var pName = document.getElementsByClassName('p-name')[0];
+							pName.textContent = 'Hi ' + userName;
+							sessionStorage.setItem('username', userName);
+							}
+						</script>
+						<p class="p-name"></p>
+					</div>
+				</div>
+			</div>
+			<!-- header will be end in above -->
+			<!-- Container Search Box Started  -->
+		<div class="row1">
+				<div class="container_search">
+					<input type="text" placeholder="Search Movies, Theaters"> <i
+						class="bi bi-search"></i>
+				</div>
+		</div>
+		    <!-- Container Search Box Will be End -->
+		    <!-- Movies List Will Started in below -->
+		<div class="row2">
+			<h3>Movies</h3>
+		</div>
+		 <div class="Star-icon0">
+					   <i class="bi bi-plus-circle"></i>
+		    </div>
+		  <div class="Star-icon1">
+		               <i class="bi bi-plus-circle"></i>
+		  </div>
+		  <div class="Star-icon2">
+		              <i class="bi bi-plus-circle"></i>
+		  </div>
+		<div class="Star-icon3">
+		              <i class="bi bi-plus-circle"></i>
+		  </div>
+		<div class="Star-icon4">
+		              <i class="bi bi-plus-circle"></i>
+		  </div> 
+		  <div class="Star-icon5">
+		              <i class="bi bi-plus-circle"></i>
+		  </div>
+		  <div class="Star-icon6">
+		              <i class="bi bi-plus-circle"></i>
+		  </div>
+		  <div class="Star-icon7">
+		              <i class="bi bi-plus-circle"></i>
+		  </div>
+		  <div class="Star-icon8">
+		              <i class="bi bi-plus-circle"></i>
+		  </div>
+		  <div class="Star-icon9">
+		              <i class="bi bi-plus-circle"></i>
+		  </div> 
+	</div>  		
+		   		<script type="text/javascript">
+		   		
+
+		   		
+   		function open(){
+   		 debugger;
+   			$.ajax({
+   				type : "POST",
+   				headers : {
+   					'Content-Type' : 'application/json'
+   				},
+   				crossDomain : true,
+   				url : "/movie/AllMovies", //this is my servlet
+
+   				success : function(data)
+   				{
+   					debugger;
+   					var products=JSON.parse(data)
+   					console.log(products["movies"])
+   					
+   					for (var i = 0; i < products["movies"].length; i++)
+   						{
+   						var movieDiv = document.createElement('div');
+   						movieDiv.className = 'movies'+i;
+   						 
+   						var movieName = document.createElement('p');
+   						movieName.textContent = products["movies"][i].movie_names;
+   						movieName.className = 'movie-name'+i;
+   						
+   						var sendMovieId=products["movies"][i].movie_id;
+   						
+   						const storedUserName = sessionStorage.getItem('username');
+   						
+   					 	var movieLink=document.createElement('a');
+   						movieLink.href="http://localhost:8080/movie/MovieDetails?sendName="+sendMovieId + "&name="+storedUserName;
+   					
+   						var movieImage = document.createElement('img');
+   						movieImage.src = products["movies"][i].movie_Images;
+   						movieImage.className = 'movie-img'+i;
+   						movieLink.appendChild(movieImage);
+   						
+   						
+   						
+   						var movieCount = document.createElement('p');
+   						movieCount.textContent = products["movies"][i].movie_count;
+   						movieCount.className = 'movie-count'+i;
+   						
+   						var movieType =document.createElement('p');
+   						movieType.textContent=products["movies"][i].movie_type;
+   						movieType.className='movie-type'+i;
+   						
+   						var starRating = document.createElement('div');
+   						starRating.className = 'star-rating';
+   					
+   						var fullStars = Math.floor(products["movies"][i].star_count);
+   						var halfStars = Math.round((products["movies"][i].star_count - fullStars) * 2);
+   					
+   						for (var j = 0; j < fullStars; j++) {
+   						  var star = document.createElement('i');
+   						  star.className = 'material-icons';
+   						  star.textContent = 'star';
+   						  starRating.appendChild(star);
+   						}
+   						if (halfStars > 0) {
+   						  var halfStar = document.createElement('i');
+   						  halfStar.className = 'material-icons';
+   						  halfStar.textContent = 'star_half';
+   						  starRating.appendChild(halfStar);
+   						}
+   						for (var j = 0; j < 5 - (fullStars + halfStars); j++) {
+   						  var notFillStar = document.createElement('i');
+   						notFillStar.className = 'material-icons';
+   						notFillStar.textContent = 'star_border';
+   						  starRating.appendChild(notFillStar);
+   						}
+   						movieDiv.appendChild(starRating);
+   						movieDiv.appendChild(movieLink);
+   						movieDiv.appendChild(movieName);
+   						movieDiv.appendChild(movieCount);
+   						movieDiv.appendChild(movieType);
+   						document.body.appendChild(movieDiv);
+
+   					    						}
+   				},     
+   				error : function(jqXHR, exception) {
+   					// Our error logic here
+   				var msg = '';
+   					if (jqXHR.status === 0) {
+   						msg = 'Not connect.\n Verify Network.';
+   					} else if (jqXHR.status == 404) {
+   						msg = 'Requested page not found. [404]';
+   					} else if (jqXHR.status == 500) {
+   						msg = 'Internal Server Error [500].';
+   					} else if (exception === 'parsererror') {
+   						msg = 'Requested JSON parse failed.';
+   					} else if (exception === 'timeout') {
+   						msg = 'Time out error.';
+   					} else if (exception === 'abort') {
+   						msg = 'Ajax request aborted.';
+   					} else if (jqXHR.status === 401) {
+   						window.location.href = "/smco/SessionFailed.jsp"
+   					} else {
+   						msg = 'Uncaught Error.\n' + jqXHR.responseText;
+   					} 
+   				}
+   				
+   			});
+   		}
+
+   		
+   		</script>
+	</body>
+</html>

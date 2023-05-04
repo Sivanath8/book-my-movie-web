@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Book My Movie</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<link rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous">
+   		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+	<style type="text/css">
+.header_logo {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 1920px;
+	height: 100px;
+	background: #0F1924 no-repeat padding-box;
+	opacity: 1;
+}
+
+.container1 {
+	width: 100%;
+	height: 1750px;
+}
+
+.header1 {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100px;
+	background: #0F1924 0% 0% no-repeat padding-box;
+	opacity: 1;
+	z-index: 30;
+}
+
+.header1 img {
+	position: absolute;
+	top: 24px;
+	left: 150px;
+	width: 134px;
+	height: 53px;
+	/* UI Properties */
+	border: 3px solid #FFFFFF;
+	opacity: 1;
+}
+
+.content_right {
+	position: relative;
+	top: 24px;
+	left: 150px;
+	width: 134px;
+	height: 53px;
+	border: 3px solid #FFFFFF;
+	opacity: 1;
+}
+
+h4 {
+	color: #FAFAFA;
+	top: 9px;
+	position: relative;
+	text-align: center;
+}
+/*.content_icon1 
+{
+	position: absolute;
+	top: 25px;
+	bottom: 25px;
+	left: 1000px;
+	bottom: 25px;
+	right: 458px;
+	width: 147px;
+    height: 50px;
+	text-align: left;
+	
+	letter-spacing: 0px;
+	font-family: Roboto;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+	border: 1px solid #707070;
+	border-radius: 3px;
+	opacity: 1;
+}*/
+.content_icon1 {
+	position: absolute;
+	top: 33px;
+	left: 1347px;
+	width: 72px;
+	height: 33px;
+	text-align: left;
+	font: normal normal normal 25px/33px arial;
+	letter-spacing: 0px;
+	opacity: 1;
+}
+
+.content_icon1 #first_button {
+	font-family: arial;
+	background-color: #0F1924;
+	color: #FFFFFF;
+	cursor: pointer;
+	border: none;
+}
+
+.content_icon2 {
+	position: absolute;
+	top: 25px;
+	left: 1468px;
+	width: 147px;
+	height: 50px;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	border: 1px solid #707070;
+	border-radius: 3px;
+	opacity: 1;
+}
+
+.content_icon2 #second_button {
+	font-family: arial;
+	background-color: #FFFFFF;
+	width: 147px;
+	height: 50px;
+	border: 1px solid #707070;
+	font-size: 25px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+.content_icon3 {
+	position: absolute;
+	top: 26px;
+	left: 1664px;
+	width: 147px;
+	height: 50px;
+	text-align: left;
+}
+
+.content_icon3 #third_button {
+	color: #F8FCFF;
+	width: 147px;
+	height: 50px;
+	font: normal normal normal 25px/33px arial;
+	opacity: 1;
+	cursor: pointer;
+	background-color: #0F1924;
+	border: 1px solid #FFFFFF;
+	border-radius: 3px;
+	opacity: 1;
+}
+
+.container_search {
+	position: absolute;
+	top: 130px;
+	left: 456px;
+	width: 1008px;
+	height: 50px;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	box-shadow: 0px 0px 3px #053B76AD;
+	opacity: 1;
+}
+
+.container_search i {
+	position: absolute;
+	top: 10px;
+	bottom: 10px;
+	right: 21px;
+	left: 957px;
+	cursor: pointer;
+}
+
+.container_search input {
+	position: absolute;
+	border: none;
+	width: 1008px;
+	height: 50px;
+	padding-left: 48px;
+	font-family: Arial;
+	font-size: 16px;
+}
+
+.row2 h3 {
+	position: absolute;
+	top: 207px;
+	left: 140px;
+	width: 127px;
+	height: 33px;
+	text-align: left;
+	font: normal normal bold 30px/34px Arial;
+	letter-spacing: 0px;
+	color: #0F1924;
+	opacity: 1;
+}
+
+.row3 {
+	position: absolute;
+	top: 256px;
+	left: 140px;
+}
+
+.first_image img {
+	display: block;
+	width: 299px;
+	height: 345px;
+	border-radius: 5px;
+}
+
+.first_image h6 {
+	position: absolute;
+	background-color: white;
+	left: 8px;
+	top: 5px;
+	width: 30px;
+	height: 30px;
+	border-radius: 16px;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.second_image {
+	position: absolute;
+	left: 343px;
+	top: 0px;
+}
+
+.second_image img {
+	display: block;
+	width: 299px;
+	height: 345px;
+	border-radius: 5px;
+}
+
+.second_image h6 {
+	position: absolute;
+	background-color: white;
+	left: 8px;
+	top: 5px;
+	width: 30px;
+	height: 30px;
+	border-radius: 16px;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.third_image {
+	position: absolute;
+	left: 686px;
+	top: 0px;
+}
+
+.third_image img {
+	display: block;
+	width: 290px;
+	height: 345px;
+	border-radius: 5px;
+}
+
+.third_image h6 {
+	position: absolute;
+	background-color: white;
+	left: 8px;
+	top: 5px;
+	width: 30px;
+	height: 30px;
+	border-radius: 16px;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.fourth_image {
+	position: absolute;
+	left: 1029px;
+	top: 0px;
+}
+
+.fourth_image img {
+	display: block;
+	width: 299px;
+	height: 345px;
+	border-radius: 5px;
+}
+
+.fourth_image h6 {
+	position: absolute;
+	background-color: white;
+	left: 8px;
+	top: 5px;
+	width: 30px;
+	height: 30px;
+	border-radius: 16px;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.fifth_image {
+	position: absolute;
+	left: 1372px;
+	top: 0px;
+}
+
+.fifth_image img {
+	display: block;
+	width: 299px;
+	height: 345px;
+	border-radius: 5px;
+}
+
+.fifth_image h6 {
+	position: absolute;
+	background-color: white;
+	left: 8px;
+	top: 5px;
+	width: 30px;
+	height: 30px;
+	border-radius: 16px;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.row4 span {
+	color: #F26F20;
+	cursor: pointer;
+}
+
+.row4 span:hover {
+	color: black;
+	cursor: pointer;
+}
+
+.row4 i {
+	position: absolute;
+	left: 280px;
+}
+
+.section_1 .para1 {
+	position: absolute;
+	top: 618px;
+	left: 140px;
+	width: 77px;
+	height: 26px;
+	text-align: left;
+	font-size: 20px;
+	letter-spacing: 0px;
+	color: #0F1924;
+	opacity: 1;
+	top: 618px;
+}
+
+.section_1 .para2 {
+	position: absolute;
+	top: 621px;
+	left: 371px;
+	width: 68px;
+	height: 21px;
+	text-align: left;
+	font-size: 16px;
+	letter-spacing: 0px;
+	color: #6B7E93;
+	opacity: 1;
+}
+
+.row4 .section_2 {
+	display: flex;
+	position: absolute;
+	top: 654px;
+	left: 140px;
+	width: 120px;
+	height: 19px;
+	opacity: 1;
+	letter-spacing: 7px;
+	cursor: pointer;
+}
+
+.section_3 .para1 {
+	position: absolute;
+	top: 618px;
+	left: 483px;
+	width: 151px;
+	height: 26px;
+	text-align: left;
+	font-size: 20px;
+	letter-spacing: 0px;
+	color: #0F1924;
+	opacity: 1;
+}
+
+.section_3 .para2 {
+	position: absolute;
+	top: 621px;
+	left: 714px;
+	width: 68px;
+	height: 21px;
+	text-align: left;
+	font-size: 16px;
+	letter-spacing: 0px;
+	color: #6B7E93;
+	opacity: 1;
+}
+
+.row4 .section_4 {
+	display: flex;
+	position: absolute;
+	top: 654px;
+	left: 483px;
+	width: 20px;
+	height: 19px;
+	opacity: 1;
+	letter-spacing: 7px;
+	cursor: pointer;
+}
+
+.section_5 .para1 {
+	position: absolute;
+	top: 618px;
+	left: 826px;
+	width: 92px;
+	height: 26px;
+	text-align: left;
+	font-size: 20px;
+	letter-spacing: 0px;
+	color: #0F1924;
+	opacity: 1;
+	letter-spacing: 0px;
+}
+
+.section_5 .para2 {
+	position: absolute;
+	top: 621px;
+	left: 1079px;
+	width: 46px;
+	height: 21px;
+	text-align: left;
+	font-size: 16px;
+	letter-spacing: 0px;
+	color: #6B7E93;
+	opacity: 1;
+	letter-spacing: 0px;
+}
+
+.row4 .section_6 {
+	display: flex;
+	position: absolute;
+	top: 654px;
+	left: 826px;
+	width: 20px;
+	height: 19px;
+	opacity: 1;
+	letter-spacing: 7px;
+}
+
+.section_7 .para1 {
+	position: absolute;
+	top: 618px;
+	left: 1169px;
+	width: 89px;
+	height: 26px;
+	text-align: left;
+	font-size: 20px;
+	letter-spacing: 0px;
+	color: #0F1924;
+	opacity: 1;
+	letter-spacing: 0px;
+}
+
+.section_7 .para2 {
+	position: absolute;
+	top: 621px;
+	left: 1422px;
+	width: 46px;
+	height: 21px;
+	text-align: left;
+	font-size: 16px;
+	letter-spacing: 0px;
+	color: #6B7E93;
+	opacity: 1;
+	letter-spacing: 0px;
+}
+
+.row4 .section_8 {
+	display: flex;
+	position: absolute;
+	top: 654px;
+	left: 1169px;
+	width: 20px;
+	height: 19px;
+	letter-spacing: 7px;
+}
+
+.section_9 .para1 {
+	position: absolute;
+	top: 618px;
+	left: 1512px;
+	width: 63px;
+	height: 26px;
+	text-align: left;
+	font-size: 20px;
+	letter-spacing: 0px;
+	color: #0F1924;
+	opacity: 1;
+	letter-spacing: 0px;
+}
+
+.section_9 .para2 {
+	position: absolute;
+	top: 621px;
+	left: 1765px;
+	width: 46px;
+	height: 21px;
+	text-align: left;
+	font-size: 16px;
+	letter-spacing: 0px;
+	color: #6B7E93;
+	opacity: 1;
+}
+
+.row4 .section_10 {
+	display: flex;
+	position: absolute;
+	top: 654px;
+	left: 1512px;
+	width: 20px;
+	height: 19px;
+	letter-spacing: 7px;
+}
+
+.card {
+	border: none;
+	border-radius: 0;
+}
+
+.carousel-inner {
+	padding: 1em;
+}
+
+.carousel {
+	position: absolute;
+	top: 752px;
+	left: 85px;
+	width: 90%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+	background-color: #e1e1e1;
+	width: 6vh;
+	height: 6vh;
+	border-radius: 50%;
+	top: 50%;
+	transform: translateY(-135%);
+}
+
+.carousel-control-prev span, .carousel-control-next span {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+@media screen and (min-width: 577px) {
+	.cards-wrapper {
+		display: flex;
+	}
+	.card {
+		margin: 0 0.5em;
+		width: calc(100%/ 2);
+	}
+	.image-wrapper {
+		height: 20vw;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.card:not(:first-child) {
+		display: none;
+	}
+}
+
+.image-wrapper img {
+	display: block;
+	width: 270px;
+	height: 300px;
+	border-radius: 5px;
+}
+
+.carousel span {
+	color: #F26F20;
+	cursor: pointer;
+}
+
+.carousel i {
+	position: absolute;
+	left: 250px;
+}
+
+.section_11 {
+	top: 305px;
+	position: absolute;
+}
+
+.section_11 .para1 {
+	position: absolute;
+	left: 0px;
+}
+
+.section_11 .para2 {
+	position: absolute;
+	left: 222px;
+	color: #6B7E93;
+}
+
+.carousel .section_12 {
+	display: flex;
+	position: absolute;
+	top: 335px;
+	width: 20px;
+	height: 19px;
+	letter-spacing: 7px;
+}
+
+.section_13 {
+	top: 305px;
+	position: absolute;
+}
+
+.section_13 .para1 {
+	position: absolute;
+	left: 0px;
+}
+
+.section_13 .para2 {
+	position: absolute;
+	left: 222px;
+	color: #6B7E93;
+}
+
+.carousel .section_14 {
+	display: flex;
+	position: absolute;
+	top: 335px;
+	width: 20px;
+	height: 19px;
+	letter-spacing: 7px;
+}
+
+.section_15 {
+	top: 305px;
+	position: absolute;
+}
+
+.section_15 .para1 {
+	position: absolute;
+	left: 0px;
+}
+
+.section_15 .para2 {
+	position: absolute;
+	left: 222px;
+	color: #6B7E93;
+}
+
+.carousel .section_16 {
+	display: flex;
+	position: absolute;
+	top: 335px;
+	width: 20px;
+	height: 19px;
+	letter-spacing: 7px;
+}
+
+.section_17 {
+	top: 305px;
+	position: absolute;
+}
+
+.section_17 .para1 {
+	position: absolute;
+	left: 0px;
+}
+
+.section_17 .para2 {
+	position: absolute;
+	left: 222px;
+	color: #6B7E93;
+}
+
+.carousel .section_18 {
+	display: flex;
+	position: absolute;
+	top: 335px;
+	width: 20px;
+	height: 19px;
+	letter-spacing: 7px;
+}
+
+.section_19 {
+	top: 305px;
+	position: absolute;
+}
+
+.section_19 .para1 {
+	position: absolute;
+	left: 0px;
+}
+
+.section_19 .para2 {
+	position: absolute;
+	left: 222px;
+	color: #6B7E93;
+}
+
+.carousel .section_20 {
+	display: flex;
+	position: absolute;
+	top: 335px;
+	width: 20px;
+	height: 19px;
+	letter-spacing: 7px;
+}
+
+.section_21 {
+	top: 305px;
+	position: absolute;
+}
+
+.section_21 .para1 {
+	position: absolute;
+	left: 0px;
+}
+
+.section_21 .para2 {
+	position: absolute;
+	left: 222px;
+	color: #6B7E93;
+}
+
+.carousel .section_22 {
+	display: flex;
+	position: absolute;
+	top: 335px;
+	width: 20px;
+	height: 19px;
+	letter-spacing: 7px;
+}
+
+.section_23 {
+	top: 305px;
+	position: absolute;
+}
+
+.section_23 .para1 {
+	position: absolute;
+	left: 0px;
+}
+
+.section_23 .para2 {
+	position: absolute;
+	left: 222px;
+	color: #6B7E93;
+}
+
+.carousel .section_24 {
+	display: flex;
+	position: absolute;
+	top: 335px;
+	width: 20px;
+	height: 19px;
+	letter-spacing: 7px;
+}
+
+.section_25 {
+	top: 305px;
+	position: absolute;
+}
+
+.section_25 .para1 {
+	position: absolute;
+	left: 0px;
+}
+
+.section_25 .para2 {
+	position: absolute;
+	left: 222px;
+	color: #6B7E93;
+}
+
+.carousel .section_26 {
+	display: flex;
+	position: absolute;
+	top: 335px;
+	width: 20px;
+	height: 19px;
+	letter-spacing: 7px;
+}
+
+.section_27 {
+	top: 305px;
+	position: absolute;
+}
+
+.section_27 .para1 {
+	position: absolute;
+	left: 0px;
+}
+
+.section_27 .para2 {
+	position: absolute;
+	left: 222px;
+	color: #6B7E93;
+}
+
+.carousel .section_28 {
+	display: flex;
+	position: absolute;
+	top: 335px;
+	width: 20px;
+	height: 19px;
+	letter-spacing: 7px;
+}
+
+.section_29 {
+	top: 305px;
+	position: absolute;
+}
+
+.section_29 .para1 {
+	position: absolute;
+	left: 0px;
+}
+
+.section_29 .para2 {
+	position: absolute;
+	left: 222px;
+	color: #6B7E93;
+}
+
+.carousel .section_30 {
+	display: flex;
+	position: absolute;
+	top: 335px;
+	width: 20px;
+	height: 19px;
+	letter-spacing: 7px;
+}
+
+.row5 {
+	position: absolute;
+	top: 703px;
+	left: 140px;
+	width: 249px;
+	height: 33px;
+	text-align: left;
+	font: normal normal bold 30px/34px Arial;
+	letter-spacing: 0px;
+	color: #0F1924;
+	opacity: 1;
+}
+/* Recommanded movie List Start */
+			.row6 {
+			   position:absolute;
+				top: 1198px;
+				left: 140px;
+				width: 215px;
+				height: 33px;
+				text-align: left;
+				font: normal normal bold 30px/34px Arial;
+				letter-spacing: 0px;
+				color: #0F1924;
+				opacity: 1;
+			}
+			  .firimage img {
+			  position: absolute;
+				top: 1247px;
+				left: 140px;
+				display: block;
+				width: 299px;
+				height: 345px;
+				border-radius: 5px;
+			}
+			.simage img
+			{
+			 position: absolute;
+				top: 1247px;
+				left: 483px;
+				display: block;
+				width: 299px;
+				height: 345px;
+				border-radius: 5px;
+			}
+			.timage img
+			{
+			 position: absolute;
+				top: 1247px;
+				left: 826px;
+				display: block;
+				width: 299px;
+				height: 345px;
+				border-radius: 5px;
+			}
+			.fimage img
+			{
+			    position: absolute;
+				top: 1247px;
+				left: 1169px;
+				display: block;
+				width: 299px;
+				height: 345px;
+				border-radius: 5px;
+			}
+			.fiimage img
+			{
+			    position: absolute;
+				top: 1247px;
+				left: 1512px;
+				display: block;
+				width: 299px;
+				height: 345px;
+				border-radius: 5px;
+			}
+/* Recomamanded movie List end */			
+/* Modal For Registration Start */ 
+		   .modal-body 
+		   {
+		    position: absolute;
+		    top: 228px;
+		    left: 0px;
+		    width: 560px;
+		    height: 552px;
+		    background: #FFFFFF 0% 0% no-repeat padding-box;
+		    box-shadow: 0px 0px 15px #00000067;
+		    border-radius: 15px;
+		    opacity: 1;
+			}
+           .modal-box
+          {
+               position: absolute;
+               top: 0px;
+               left: 0px;
+               width: 560px;
+               height: 643px;
+               background: #FFFFFF 0% 0% no-repeat padding-box;
+               box-shadow: 0px 0px 15px #00000067;
+               border-radius: 15px;
+               opacity: 1;
+          }
+         
+           .main p 
+           {
+               left: 230px;
+               top: 102px;
+               position: relative;
+               font-size: 26px;
+               letter-spacing: 0px;
+               color: #D6346C;
+               opacity: 1;
+           }
+          
+           .main .Name 
+           {
+               position: relative;
+               left: 108px;
+               display: flex;
+               width: 53px;
+               height: 26px;
+               font-size: 20px;
+               color: #0F1924;
+           }
+           .main input 
+           {
+               position: relative;
+               top: 100px;
+               left: 108px;
+               width: 344px;
+               height: 50px;
+               background: #FFFFFF 0% 0% no-repeat padding-box;
+               border: 1px solid #707070;
+               border-radius: 3px;
+               opacity: 1;
+           }
+           
+
+           .main1 .MobileNumber
+           {
+               display: flex;
+               position: relative;
+               left: 108px;
+               top: 110px;
+               font-size: 16px;
+               color: #0F1924;
+           }
+          
+           .main2 .password
+           {
+               display: flex;
+               position: relative;
+               top: 110px;
+               left: 108px;
+               font-size: 16px;
+               color: #0F1924;
+           }
+           .footer
+           { 
+               position: relative;
+               top: 142px;
+               left: 108px;
+               width: 344px;
+               height: 50px;
+               border-radius: 3px;
+               opacity: 1;
+           }
+            .footer button
+            {
+               width: 344px;
+               height: 50px;
+               font-size:20px;
+               color: #FFFFFF;
+               border: none;
+               background: #D6346C 0% 0% no-repeat padding-box;
+               letter-spacing: 0px;
+               opacity: 1;
+            }
+/* Modal Registration End */    
+/* modal Login Movie List Start */  
+             .modal-body
+          {
+               position: absolute;
+               top: 228px;
+               left: 0px;
+               width: 560px;
+               height: 552px;
+               background: #FFFFFF 0% 0% no-repeat padding-box;
+               box-shadow: 0px 0px 15px #00000067;
+               border-radius: 15px;
+               opacity: 1;
+          }
+          .main 
+          {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+         
+           .main p 
+           {
+               left: 245px;
+               top: 102px;
+               position: relative;
+               font-size: 26px;
+               letter-spacing: 0px;
+               color: #D6346C;
+               opacity: 1;
+           }
+          
+           .main input 
+           {
+               position: relative;
+               top: 100px;
+               left: 108px;
+               width: 344px;
+               height: 50px;
+               background: #FFFFFF 0% 0% no-repeat padding-box;
+               border: 1px solid #707070;
+               border-radius: 3px;
+               opacity: 1;
+           }
+           
+
+           .main1 .MobileNumber
+           {
+               display: flex;
+               position: relative;
+               left: 108px;
+               top: 110px;
+               font-size: 16px;
+               color: #0F1924;
+           }
+          
+           .main2 .password
+           {
+               display: flex;
+               position: relative;
+               top: 110px;
+               left: 108px;
+               font-size: 16px;
+               color: #0F1924;
+           }
+           .footer
+           { 
+               position: relative;
+               top: 142px;
+               left: 108px;
+               width: 344px;
+               height: 50px;
+               border-radius: 3px;
+               opacity: 1;
+           }
+            .footer button
+            {
+               width: 344px;
+               height: 50px;
+               font-size:20px;
+               color: #FFFFFF;
+               border: none;
+               background: #D6346C 0% 0% no-repeat padding-box;
+               letter-spacing: 0px;
+               opacity: 1;
+            }
+             
+/* modal Login page End */                  
+</style>
+	<!-- <script>
+	
+	      var jsonData={};
+	    function open()
+	    {
+	    	$.ajax({
+	            type : "POST",
+	            headers : {
+	              'Content-Type' : 'application/json'
+	            },
+	            crossDomain : true,
+	            url : "/movie/fetchMovie",
+	            success : function(response) {
+	            	jsonData=response;
+	            	console.log(jsonData);
+	            },
+	            error : function() {
+	            }
+	          });
+	    	
+	    }
+	
+	</script> -->
+</head>
+<body onload="open()">
+	<div class="container1">
+		<div class="row">
+			<div class="header1">
+				<img src ="https://storage.googleapis.com/smco-web-static-assets/TraineeProject/logo-png%20(1).png">
+					
+					<div class="content_icon1">
+						<a href="">
+							<button id="first_button">Admin</button>
+						</a>
+					</div>
+					<div class="content_icon2">
+							<button id="second_button" data-bs-toggle="modal" data-bs-target="#exampleModal-1" >Login</button>
+					</div>
+					<div class="content_icon3">
+							<button id="third_button" data-bs-toggle="modal" data-bs-target="#exampleModal">Register</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row1">
+			<div class="container_search">
+				<input type="text" placeholder="Search Movies, Theaters"> <i
+					class="bi bi-search"></i>
+			</div>
+			</div>
+		<!-- Trending Movie list Start -->	
+				<div class="row2">
+					<h3>Trending</h3>
+				</div>
+				<div class="row3">
+					<div class="first_image">
+						<h6>01</h6>
+						<a href=""> <img
+							src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images">
+						</a>
+					</div>
+					<div class="second_image">
+						<h6>02</h6>
+						<a href=""> <img
+							src="https://i9.behindwoods.com/tamil-movies/ponniyin-selvan-1/thumbnails/related-section-image-ponniyin-selvan-1-7.jpg">
+						</a>
+					</div>
+					<div class="third_image">
+						<h6>03</h6>
+						<a href=""> <img
+							src="https://filmyspace.in/wp-content/uploads/2022/01/VIP-300x300.jpeg">
+						</a>
+					</div>
+					<div class="fourth_image">
+						<h6>04</h6>
+						<a href=""> <img
+							src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-RUKoV1oFexo%2FUQwmcanVxxI%2FAAAAAAAAMGM%2FgwOG8K6ETqk%2Fs400%2FAyan%2B(2009)%2BHindi%2BDubbed%2BTamil%2BMovie.jpg&f=1&nofb=1&ipt=c090298b621a119af4465c9f2416db5430bb54fb6fe2d310ee4e5c7f4257dfb2&ipo=images">
+						</a>
+					</div>
+					<div class="fifth_image">
+						<h6>05</h6>
+						<a href=""> <img
+							src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftotalreporter.com%2Fwp-content%2Fuploads%2F2022%2F06%2FVikram-300x280.jpg&f=1&nofb=1&ipt=b203a2513975e6b34894f494fab9212d6c251536331551280a21008c32adfda5&ipo=images">
+						</a>
+					</div>
+				</div>
+				<div class="row4">
+					<div class="section_1">
+						<h6 class="para1">Theeran</h6>
+						<h6 class="para2">Historical</h6>
+					</div>
+					<div class="section_2">
+						<span id="1" onclick=functionFillingUnfilling(this.id)
+							class="bi bi-star"></span> <span id="2"
+							onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+						<span id="3" onclick=functionFillingUnfilling(this.id)
+							class="bi bi-star"></span> <span id="4"
+							onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+						<span id="5" onclick=functionFillingUnfilling(this.id)
+							class="bi bi-star"></span> <i class="bi bi-plus-circle"></i>
+					</div>
+					<div class="section_3">
+						<h6 class="para1">PooniyanSelvan</h6>
+						<h6 class="para2">Historical</h6>
+					</div>
+					<div class="section_4">
+						<span id="6" onclick=functionFillingUnfilling(this.id)
+							class="bi bi-star"></span> <span id="7"
+							onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+						<span id="8" onclick=functionFillingUnfilling(this.id)
+							class="bi bi-star"></span> <span id="9"
+							onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+						<span id="10" onclick=functionFillingUnfilling(this.id)
+							class="bi bi-star"></span> <i class="bi bi-plus-circle"></i>
+					</div>
+					<div class="section_5">
+						<h6 class="para1">VIP</h6>
+						<h6 class="para2">Action</h6>
+					</div>
+					<div class="section_6">
+						<span id="11" onclick=functionFillingUnfilling(this.id)
+							class="bi bi-star"></span> <span id="12"
+							onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+						<span id="13" onclick=functionFillingUnfilling(this.id)
+							class="bi bi-star"></span> <span id="14"
+							onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+						<span id="15" onclick=functionFillingUnfilling(this.id)
+							class="bi bi-star"></span> <i class="bi bi-plus-circle"></i>
+					</div>
+					<div class="section_7">
+						<h6 class="para1">Ayan</h6>
+						<h6 class="para2">Action</h6>
+					</div>
+					<div class="section_8">
+						<span id="16" onclick=functionFillingUnfilling(this.id)
+							class="bi bi-star"></span> <span id="17"
+							onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+						<span id="18" onclick=functionFillingUnfilling(this.id)
+							class="bi bi-star"></span> <span id="19"
+							onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+						<span id="20" onclick=functionFillingUnfilling(this.id)
+							class="bi bi-star"></span> <i class="bi bi-plus-circle"></i>
+					</div>
+					<div class="section_9">
+						<h6 class="para1">Vikram</h6>
+						<h6 class="para2">Action</h6>
+					</div>
+					<div class="section_10">
+						<span id="21" onclick=functionFillingUnfilling(this.id)
+							class="bi bi-star"></span> <span id="22"
+							onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+						<span id="23" onclick=functionFillingUnfilling(this.id)
+							class="bi bi-star"></span> <span id="24"
+							onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+						<span id="25" onclick=functionFillingUnfilling(this.id)
+							class="bi bi-star"></span> <i class="bi bi-plus-circle"></i>
+					</div>
+				</div>
+		<!-- Trending Movie List End -->
+		 <!-- Curosal item Container Start -->
+					<div class="row5">
+						<h3>
+							<b>Top 10 MovieList</b>
+						</h3>
+					</div>
+					<div id="carouselExampleControls" class="carousel slide"
+						data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<div class="cards-wrapper">
+									<div class="card">
+										<div class="image-wrapper">
+											<img
+												src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images"
+												alt="...">
+											<div class="section_11">
+												<h6 class="para1">Theeran</h6>
+												<h6 class="para2">Action</h6>
+											</div>
+											<div class="section_12">
+												<span id="1" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="2"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="3" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="4"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="5" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <i class="bi bi-plus-circle"></i>
+											</div>
+										</div>
+									</div>
+									<div class="card">
+										<div class="image-wrapper">
+											<img
+												src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images"
+												alt="...">
+											<div class="section_13">
+												<h6 class="para1">Theeran</h6>
+												<h6 class="para2">Action</h6>
+											</div>
+											<div class="section_14">
+												<span id="1" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="2"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="3" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="4"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="5" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <i class="bi bi-plus-circle"></i>
+											</div>
+										</div>
+									</div>
+									<div class="card">
+										<div class="image-wrapper">
+											<img
+												src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images"
+												alt="...">
+											<div class="section_15">
+												<h6 class="para1">Vikram</h6>
+												<h6 class="para2">Action</h6>
+											</div>
+											<div class="section_16">
+												<span id="1" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="2"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="3" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="4"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="5" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <i class="bi bi-plus-circle"></i>
+											</div>
+										</div>
+									</div>
+									<div class="card">
+										<div class="image-wrapper">
+											<img
+												src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images"
+												alt="...">
+											<div class="section_17">
+												<h6 class="para1">Theeran</h6>
+												<h6 class="para2">Action</h6>
+											</div>
+											<div class="section_18">
+												<span id="1" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="2"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="3" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="4"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="5" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <i class="bi bi-plus-circle"></i>
+											</div>
+										</div>
+									</div>
+									<div class="card">
+										<div class="image-wrapper">
+											<img
+												src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images"
+												alt="...">
+											<div class="section_19">
+												<h6 class="para1">Theeran</h6>
+												<h6 class="para2">Action</h6>
+											</div>
+											<div class="section_20">
+												<span id="1" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="2"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="3" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="4"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="5" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <i class="bi bi-plus-circle"></i>
+											</div>
+				
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="cards-wrapper">
+									<div class="card">
+										<div class="image-wrapper">
+											<img
+												src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images"
+												alt="...">
+											<div class="section_21">
+												<h6 class="para1">Theeran</h6>
+												<h6 class="para2">Action</h6>
+											</div>
+											<div class="section_22">
+												<span id="1" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="2"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="3" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="4"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="5" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <i class="bi bi-plus-circle"></i>
+											</div>
+										</div>
+									</div>
+									<div class="card">
+										<div class="image-wrapper">
+											<img
+												src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images"
+												alt="...">
+											<div class="section_23">
+												<h6 class="para1">Theeran</h6>
+												<h6 class="para2">Action</h6>
+											</div>
+											<div class="section_24">
+												<span id="1" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="2"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="3" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="4"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="5" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <i class="bi bi-plus-circle"></i>
+											</div>
+										</div>
+									</div>
+									<div class="card">
+										<div class="image-wrapper">
+											<div class="myimage">
+												<img
+													src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images"
+													alt="...">
+												<div class="section_25">
+													<h6 class="para1">Theeran</h6>
+													<h6 class="para2">Action</h6>
+												</div>
+												<div class="section_26">
+													<span id="1" onclick=functionFillingUnfilling(this.id)
+														class="bi bi-star"></span> <span id="2"
+														onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+													<span id="3" onclick=functionFillingUnfilling(this.id)
+														class="bi bi-star"></span> <span id="4"
+														onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+													<span id="5" onclick=functionFillingUnfilling(this.id)
+														class="bi bi-star"></span> <i class="bi bi-plus-circle"></i>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card">
+										<div class="image-wrapper">
+											<img
+												src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images"
+												alt="...">
+											<div class="section_27">
+												<h6 class="para1">Theeran</h6>
+												<h6 class="para2">Action</h6>
+											</div>
+											<div class="section_28">
+												<span id="1" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="2"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="3" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="4"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="5" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <i class="bi bi-plus-circle"></i>
+											</div>
+										</div>
+									</div>
+									<div class="card">
+										<div class="image-wrapper">
+											<img
+												src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images"
+												alt="...">
+											<div class="section_29">
+												<h6 class="para1">Theeran</h6>
+												<h6 class="para2">Action</h6>
+											</div>
+											<div class="section_30">
+												<span id="1" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="2"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="3" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <span id="4"
+													onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+												<span id="5" onclick=functionFillingUnfilling(this.id)
+													class="bi bi-star"></span> <i class="bi bi-plus-circle"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button"
+							data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						</button>
+						<button class="carousel-control-next" type="button"
+							data-bs-target="#carouselExampleControls" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						</button>
+					</div>
+	<!-- Curosal item COnatined End -->
+	 <!-- Recommend Container Start  -->
+					<div class="row6">
+						<h3>
+							<b>Trending</b>
+						</h3>
+					</div>
+					<div class="row7">
+						<div class="firimage">
+							<a href=""> <img
+								src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images">
+							</a>
+						</div>
+						<div class="simage">
+							<a href=""> <img
+								src="https://i9.behindwoods.com/tamil-movies/ponniyin-selvan-1/thumbnails/related-section-image-ponniyin-selvan-1-7.jpg">
+							</a>
+						</div>
+						<div class="timage">
+							<a href=""> <img
+								src="https://filmyspace.in/wp-content/uploads/2022/01/VIP-300x300.jpeg">
+							</a>
+						</div>
+						<div class="fimage">
+							<a href=""> <img
+								src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-RUKoV1oFexo%2FUQwmcanVxxI%2FAAAAAAAAMGM%2FgwOG8K6ETqk%2Fs400%2FAyan%2B(2009)%2BHindi%2BDubbed%2BTamil%2BMovie.jpg&f=1&nofb=1&ipt=c090298b621a119af4465c9f2416db5430bb54fb6fe2d310ee4e5c7f4257dfb2&ipo=images">
+							</a>
+						</div>
+						<div class="fiimage">
+							<a href=""> <img
+								src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftotalreporter.com%2Fwp-content%2Fuploads%2F2022%2F06%2FVikram-300x280.jpg&f=1&nofb=1&ipt=b203a2513975e6b34894f494fab9212d6c251536331551280a21008c32adfda5&ipo=images">
+							</a>
+						</div>
+					</div>
+		<!-- Recommend Container End  -->
+		<!-- Modal For Registration Code -->
+		  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-body">
+       <div class="modal-box">
+            <div class="main"> 
+                  <p>Register</p>
+                  <p class="Name">Name</p>
+                  <input type="text" placeholder="Enter your name">
+                <div class="main1">
+                  <p class="MobileNumber">MobileNumber</p>
+                  <input type="Number" placeholder="Enter your Number">
+            </div>
+            <div class="main2">
+               <p class="password">Createpassword</p>
+               <input type="password" placeholder="Enter your password">
+            </div>
+           <div class="footer">
+               <a href="">  <button>Register</button> </a>
+            </div>
+       </div>
+     </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Model For Login Code -->
+					 <div class="modal fade" id="exampleModal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-body">
+					            <div class="main"> 
+					                   <p>Login</p>
+					                  
+					                <div class="main1">
+					                  <p class="MobileNumber">MobileNumber</p>
+					                  <input type="Number" placeholder="Enter your Mobilenumber">
+					            </div>
+					            <div class="main2">
+					               <p class="password">Enterpassword</p>
+					               <input type="password" placeholder="Enter your password">
+					            </div>
+					           <div class="footer">
+					               <a href="">  <button>Login</button> </a>
+					            </div>
+					       </div>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+	<!-- modal login page end -->
+	     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
+          </script> 
+         <script type="text/javascript">
+            function functionFillingUnfilling(paraid)
+            {
+            	if($("#"+paraid).hasClass("bi-star"))
+            
+            	{
+            		 $("#"+paraid).removeClass("bi-star");
+            	      $("#"+paraid).addClass("bi-star-fill");
+            		}
+            	else
+            		{
+            		   $("#"+paraid).removeClass("bi-star-fill");
+          	           $("#"+paraid).addClass("bi-star");
+            		}
+            }
+            
+         </script>
+  </body>
+</html>
